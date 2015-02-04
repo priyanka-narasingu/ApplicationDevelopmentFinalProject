@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/Account/Login.aspx" title=""  description="" roles="*">
+    <siteMapNode url="~/DeptHead/DeptHeadHomeUI.aspx" title="Home"  description="" roles="DeptHead,DeptDel" />
+    <siteMapNode url="~/DeptEmp/EmpHomeUI.aspx" title="Home"  description="" roles="DeptEmp"/>
+    <siteMapNode url="~/DeptRep/RepHomeUI.aspx" title="Home"  description="" roles="DeptRep"/>
+    <siteMapNode url="~/StoreClerk/ClerkHomeUI.aspx" title="Home"  description="" roles="StoreClerk"/>
+    <siteMapNode url="~/StoreSup/SupHomeUI.aspx" title="Home"  description="" roles="StoreSup"/>
+    <siteMapNode url="~/StoreMgr/MgrHomeUI.aspx" title="Home"  description="" roles="StoreMgr"/>
+    <siteMapNode url="~/DeptHead/DeptHeadViewRequisitionHistoryUI.aspx" title="Approve Requests"  description="" roles="DeptHead, DeptDel"/>
+    <siteMapNode url="" title="Manage Requests"  description="" roles="StoreClerk, StoreSup, StoreMgr">
+      <siteMapNode url="~/StoreClerk/ClerkViewRequisitionHistoryUI.aspx" title="View Stationery Requests"  description="" roles="StoreClerk"/>
+      <siteMapNode url="~/StoreClerk/StationeryRetrievalUI.aspx" title="Generate Stationery Retrieval Form"  description="" roles="StoreClerk"/>
+      <siteMapNode url="~/StoreClerk/DisbursementListUI.aspx" title="Generate Disbursement List"  description="" roles="StoreClerk"/>
+      <siteMapNode url="~/StoreClerk/UpdateDisbursementListUI.aspx" title="Update Disbursement List"  description="" roles="StoreClerk"/>
+    </siteMapNode>
+    <siteMapNode url="~/DeptHead/DeptHeadDelegateAuthorityUI.aspx" title="Delegate Authority"  description="" roles="DeptHead"/>
+    <siteMapNode url="~/DeptHead/DeptHeadMaintainCollectionPointUI.aspx" title="Maintain Collection Details"  description="" roles="DeptHead, DeptDel"/>
+    <siteMapNode url="~/DeptEmp/EmpStationeryRequisitionUI.aspx" title="Request Stationery"  description="" roles="DeptEmp"/>
+    <siteMapNode url="~/DeptRep/RepStationeryRequistion.aspx" title="Request Stationery"  description="" roles="DeptRep"/>
+    <siteMapNode url="~/DeptEmp/EmpViewRequisitionHistoryUI.aspx" title="View Requisition History"  description="" roles="DeptEmp"/>
+    <siteMapNode url="~/DeptRep/DeptRepViewRequistionHistory.aspx" title="View Requisition History"  description="" roles="DeptRep"/>
+
+    <siteMapNode url="~/DeptRep/RepMaintainCollectionPointUI.aspx" title="Maintain Collection Point"  description="" roles="DeptRep"/>
+    <siteMapNode url="~/StoreClerk/ReplenishStockUI.aspx" title="Replenish Stock"  description="" roles="StoreClerk"/>
+    <siteMapNode url="" title="Purchase Orders"  description="" roles="StoreClerk, StoreSup, StoreMgr">
+      <siteMapNode url="~/StoreClerk/CreatePurchaseOrderUI.aspx" title="Create Purchase Orders"  description="" roles="StoreClerk, StoreSup, StoreMgr"/>
+      <siteMapNode url="~/StoreClerk/ViewPurchaseOrderUI.aspx" title="Update Purchase Orders"  description="" roles="StoreClerk, StoreSup, StoreMgr"/>
+    </siteMapNode>
+   <siteMapNode url="~/StoreClerk/ReportDiscrepancyUI.aspx" title="Report Discrepancy"  description="" roles="StoreClerk"/>
+    
+   <siteMapNode url="" title="Reports"  description="" roles="StoreClerk, StoreSup, StoreMgr">
+      <siteMapNode url="~/StoreClerk/InventoryStatusReportUI.aspx" title="Inventory Status Report"  description="" roles="StoreClerk"/>
+      <siteMapNode url="~/StoreClerk/StockListReportUI.aspx" title="Stock List"  description="" roles="StoreClerk"/>
+      <siteMapNode url="~/StoreClerk/ReorderReportUI.aspx" title="Reorder Report"  description="" roles="StoreClerk"/>
+      <siteMapNode url="~/StoreSup/ManagementReportUI.aspx" title="Management Reports"  description="" roles="StoreSup"/>
+    </siteMapNode>
+    <siteMapNode url="~/StoreSup/SupViewStockAdjustmentUI.aspx" title="Approve Stock Adjustments"  description="" roles="StoreSup,StoreMgr"/>
+  </siteMapNode>
+</siteMap>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#E9F8F9"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true" >
+ 
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search Stocks"
+        android:inputType="text" >
+ 		
+    </EditText>
+
+    <ListView
+        android:id="@+id/stockList"
+        android:layout_width="fill_parent"
+        android:layout_height="383dp"
+        android:layout_x="0dp"
+        android:layout_y="34dp" >
+    </ListView>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="209dp"
+        android:layout_height="wrap_content"
+        android:layout_x="64dp"
+        android:layout_y="429dp"
+        android:background="@drawable/submit_btn_blue"
+        android:text="@string/disList" />
+ 
+</AbsoluteLayout>

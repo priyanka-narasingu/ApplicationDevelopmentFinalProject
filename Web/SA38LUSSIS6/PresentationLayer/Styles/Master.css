@@ -1,0 +1,96 @@
+﻿body
+{
+    background-color: WhiteSmoke;
+}
+
+#banner
+{
+    margin-bottom: 0px !important;
+}
+
+.lgn
+{
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.lgntxt
+{
+    font-style: italic;
+    font-weight: bold;
+}
+
+.logouttxt
+{
+    color: rgb(78, 76, 76);
+    font-size: Small;
+    text-decoration: underline;
+    padding: 0px !important;
+    background-color: inherit !important;
+}
+
+.logouttxt:hover
+{
+    text-decoration: underline !important;
+    background-color: inherit !important;
+}
+
+
+#MainMenu
+{
+    padding-top: 3px;
+    height: 30px;
+}
+
+#MainMenu > li
+{
+    height: 30px;
+}
+
+#MainMenu a.popout
+{
+    background-image: url(/Images/caret_down.png) !important;
+}
+
+@media print
+{
+    .noPrint
+    {
+        display: none;
+    }
+}
+
+.zIndx
+{
+    z-index: 999;
+}
+
+
+/*#MainMenu > ul
+{
+    float: left;
+    margin: 0;
+    list-style: none;
+    padding-left: 0;
+    display: block;
+}
+
+#MainMenu > ul > li
+{
+    float: left;
+    position: relative;
+    display: block;
+}
+
+#MainMenu > ul > li > a
+{
+    color: #777;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    background: transparent;
+}*/

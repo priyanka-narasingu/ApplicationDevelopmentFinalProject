@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <contentPath path="C:\Users\a0122213a\Documents\AD\Final Submission\AD Project SA 38 - Team6\05.Source Code\Web\SA38LUSSIS6\PresentationLayer\obj\Debug\Package\PackageTmp" />
+  <setAcl path="C:\Users\a0122213a\Documents\AD\Final Submission\AD Project SA 38 - Team6\05.Source Code\Web\SA38LUSSIS6\PresentationLayer\obj\Debug\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="C:\Users\a0122213a\Documents\AD\Final Submission\AD Project SA 38 - Team6\05.Source Code\Web\SA38LUSSIS6\PresentationLayer\obj\Debug\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+  <setAcl path="C:\Users\a0122213a\Documents\AD\Final Submission\AD Project SA 38 - Team6\05.Source Code\Web\SA38LUSSIS6\PresentationLayer\obj\Debug\Package\PackageTmp\App_Data" setAclResourceType="Directory" setAclAccess="Write" />
+</sitemanifest>

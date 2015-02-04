@@ -1,0 +1,1934 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SA38ADTeam6Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="SA38ADTeam6ModelStoreContainer">
+          <EntitySet Name="CollectionPoint" EntityType="SA38ADTeam6Model.Store.CollectionPoint" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Delegation" EntityType="SA38ADTeam6Model.Store.Delegation" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Department" EntityType="SA38ADTeam6Model.Store.Department" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Discrepancy" EntityType="SA38ADTeam6Model.Store.Discrepancy" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DiscrepancyDetail" EntityType="SA38ADTeam6Model.Store.DiscrepancyDetail" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Employee" EntityType="SA38ADTeam6Model.Store.Employee" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PurchaseOrder" EntityType="SA38ADTeam6Model.Store.PurchaseOrder" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PurchaseOrderDetail" EntityType="SA38ADTeam6Model.Store.PurchaseOrderDetail" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Request" EntityType="SA38ADTeam6Model.Store.Request" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RequestDetail" EntityType="SA38ADTeam6Model.Store.RequestDetail" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="StationeryDisbursement" EntityType="SA38ADTeam6Model.Store.StationeryDisbursement" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="StationeryDisbursementDetail" EntityType="SA38ADTeam6Model.Store.StationeryDisbursementDetail" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="StationeryRetrieval" EntityType="SA38ADTeam6Model.Store.StationeryRetrieval" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="StationeryRetrievalDept" EntityType="SA38ADTeam6Model.Store.StationeryRetrievalDept" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="StationeryRetrievalDetail" EntityType="SA38ADTeam6Model.Store.StationeryRetrievalDetail" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Stock" EntityType="SA38ADTeam6Model.Store.Stock" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Supplier" EntityType="SA38ADTeam6Model.Store.Supplier" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserRole" EntityType="SA38ADTeam6Model.Store.UserRole" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="fk_Delegation_EmployeeID" Association="SA38ADTeam6Model.Store.fk_Delegation_EmployeeID">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Delegation" EntitySet="Delegation" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Department_CollectionPt" Association="SA38ADTeam6Model.Store.fk_Department_CollectionPt">
+            <End Role="CollectionPoint" EntitySet="CollectionPoint" />
+            <End Role="Department" EntitySet="Department" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Department_DeptRep" Association="SA38ADTeam6Model.Store.fk_Department_DeptRep">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Department" EntitySet="Department" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Discrepancy_ApprovedBy" Association="SA38ADTeam6Model.Store.fk_Discrepancy_ApprovedBy">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Discrepancy" EntitySet="Discrepancy" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Discrepancy_RaisedBy" Association="SA38ADTeam6Model.Store.fk_Discrepancy_RaisedBy">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Discrepancy" EntitySet="Discrepancy" />
+          </AssociationSet>
+          <AssociationSet Name="fk_DiscrepancyDetail_DiscrepancyID" Association="SA38ADTeam6Model.Store.fk_DiscrepancyDetail_DiscrepancyID">
+            <End Role="Discrepancy" EntitySet="Discrepancy" />
+            <End Role="DiscrepancyDetail" EntitySet="DiscrepancyDetail" />
+          </AssociationSet>
+          <AssociationSet Name="fk_DiscrepancyDetail_ItemCode" Association="SA38ADTeam6Model.Store.fk_DiscrepancyDetail_ItemCode">
+            <End Role="Stock" EntitySet="Stock" />
+            <End Role="DiscrepancyDetail" EntitySet="DiscrepancyDetail" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Employee_DeptCode" Association="SA38ADTeam6Model.Store.fk_Employee_DeptCode">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Employee_RoleCode" Association="SA38ADTeam6Model.Store.fk_Employee_RoleCode">
+            <End Role="UserRole" EntitySet="UserRole" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="fk_PurchaseOrder_Supplier" Association="SA38ADTeam6Model.Store.fk_PurchaseOrder_Supplier">
+            <End Role="Supplier" EntitySet="Supplier" />
+            <End Role="PurchaseOrder" EntitySet="PurchaseOrder" />
+          </AssociationSet>
+          <AssociationSet Name="fk_PurchaseOrderDetail_ItemCode" Association="SA38ADTeam6Model.Store.fk_PurchaseOrderDetail_ItemCode">
+            <End Role="Stock" EntitySet="Stock" />
+            <End Role="PurchaseOrderDetail" EntitySet="PurchaseOrderDetail" />
+          </AssociationSet>
+          <AssociationSet Name="fk_PurchaseOrderDetail_PONumber" Association="SA38ADTeam6Model.Store.fk_PurchaseOrderDetail_PONumber">
+            <End Role="PurchaseOrder" EntitySet="PurchaseOrder" />
+            <End Role="PurchaseOrderDetail" EntitySet="PurchaseOrderDetail" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Request_ApprovedBy" Association="SA38ADTeam6Model.Store.fk_Request_ApprovedBy">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Request" EntitySet="Request" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Request_EmployeeID" Association="SA38ADTeam6Model.Store.fk_Request_EmployeeID">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Request" EntitySet="Request" />
+          </AssociationSet>
+          <AssociationSet Name="fk_RequestDetail_ItemCode" Association="SA38ADTeam6Model.Store.fk_RequestDetail_ItemCode">
+            <End Role="Stock" EntitySet="Stock" />
+            <End Role="RequestDetail" EntitySet="RequestDetail" />
+          </AssociationSet>
+          <AssociationSet Name="fk_RequestDetail_RequestID" Association="SA38ADTeam6Model.Store.fk_RequestDetail_RequestID">
+            <End Role="Request" EntitySet="Request" />
+            <End Role="RequestDetail" EntitySet="RequestDetail" />
+          </AssociationSet>
+          <AssociationSet Name="fk_StationeryDisbursement_CollectionPt" Association="SA38ADTeam6Model.Store.fk_StationeryDisbursement_CollectionPt">
+            <End Role="CollectionPoint" EntitySet="CollectionPoint" />
+            <End Role="StationeryDisbursement" EntitySet="StationeryDisbursement" />
+          </AssociationSet>
+          <AssociationSet Name="fk_StationeryDisbursement_DeptCode" Association="SA38ADTeam6Model.Store.fk_StationeryDisbursement_DeptCode">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="StationeryDisbursement" EntitySet="StationeryDisbursement" />
+          </AssociationSet>
+          <AssociationSet Name="fk_StationeryDisbursement_DeptRep" Association="SA38ADTeam6Model.Store.fk_StationeryDisbursement_DeptRep">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="StationeryDisbursement" EntitySet="StationeryDisbursement" />
+          </AssociationSet>
+          <AssociationSet Name="fk_StationeryDisbursement_RetrievalID" Association="SA38ADTeam6Model.Store.fk_StationeryDisbursement_RetrievalID">
+            <End Role="StationeryRetrieval" EntitySet="StationeryRetrieval" />
+            <End Role="StationeryDisbursement" EntitySet="StationeryDisbursement" />
+          </AssociationSet>
+          <AssociationSet Name="fk_StationeryDisbursementDetail_ItemCode" Association="SA38ADTeam6Model.Store.fk_StationeryDisbursementDetail_ItemCode">
+            <End Role="Stock" EntitySet="Stock" />
+            <End Role="StationeryDisbursementDetail" EntitySet="StationeryDisbursementDetail" />
+          </AssociationSet>
+          <AssociationSet Name="fk_StationeryRetrievalDept_DeptCode" Association="SA38ADTeam6Model.Store.fk_StationeryRetrievalDept_DeptCode">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="StationeryRetrievalDept" EntitySet="StationeryRetrievalDept" />
+          </AssociationSet>
+          <AssociationSet Name="fk_StationeryRetrievalDept_ItemCode" Association="SA38ADTeam6Model.Store.fk_StationeryRetrievalDept_ItemCode">
+            <End Role="Stock" EntitySet="Stock" />
+            <End Role="StationeryRetrievalDept" EntitySet="StationeryRetrievalDept" />
+          </AssociationSet>
+          <AssociationSet Name="fk_StationeryRetrievalDept_RetrievalID" Association="SA38ADTeam6Model.Store.fk_StationeryRetrievalDept_RetrievalID">
+            <End Role="StationeryRetrieval" EntitySet="StationeryRetrieval" />
+            <End Role="StationeryRetrievalDept" EntitySet="StationeryRetrievalDept" />
+          </AssociationSet>
+          <AssociationSet Name="fk_StationeryRetrievalDetail_ItemCode" Association="SA38ADTeam6Model.Store.fk_StationeryRetrievalDetail_ItemCode">
+            <End Role="Stock" EntitySet="Stock" />
+            <End Role="StationeryRetrievalDetail" EntitySet="StationeryRetrievalDetail" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Stock_Supplier1" Association="SA38ADTeam6Model.Store.fk_Stock_Supplier1">
+            <End Role="Supplier" EntitySet="Supplier" />
+            <End Role="Stock" EntitySet="Stock" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Stock_Supplier2" Association="SA38ADTeam6Model.Store.fk_Stock_Supplier2">
+            <End Role="Supplier" EntitySet="Supplier" />
+            <End Role="Stock" EntitySet="Stock" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Stock_Supplier3" Association="SA38ADTeam6Model.Store.fk_Stock_Supplier3">
+            <End Role="Supplier" EntitySet="Supplier" />
+            <End Role="Stock" EntitySet="Stock" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="CollectionPoint">
+          <Key>
+            <PropertyRef Name="CollectionPointCode" />
+          </Key>
+          <Property Name="CollectionPointCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="CollectionPointName" Type="varchar" MaxLength="150" />
+          <Property Name="CollectionTime" Type="varchar" MaxLength="20" />
+          <Property Name="DateUpdated" Type="datetime" />
+          <Property Name="DeletedFlag" Type="bit" />
+        </EntityType>
+        <EntityType Name="Delegation">
+          <Key>
+            <PropertyRef Name="DelegationID" />
+          </Key>
+          <Property Name="DelegationID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeID" Type="varchar" MaxLength="100" />
+          <Property Name="StartDate" Type="datetime" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="DelegatedFlag" Type="bit" />
+        </EntityType>
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="DeptCode" />
+          </Key>
+          <Property Name="DeptCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="DeptName" Type="varchar" MaxLength="150" />
+          <Property Name="CollectionPoint" Type="varchar" MaxLength="20" />
+          <Property Name="DeptContactNo" Type="varchar" MaxLength="50" />
+          <Property Name="DeptCollectionPin" Type="int" />
+          <Property Name="DateUpdated" Type="datetime" />
+          <Property Name="DeletedFlag" Type="bit" />
+          <Property Name="DeptRep" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Discrepancy">
+          <Key>
+            <PropertyRef Name="DiscrepancyID" />
+          </Key>
+          <Property Name="DiscrepancyID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DateRaised" Type="datetime" />
+          <Property Name="RaisedBy" Type="varchar" MaxLength="100" />
+          <Property Name="TotalAmount" Type="float" />
+          <Property Name="DiscrepancyStatus" Type="varchar" MaxLength="50" />
+          <Property Name="ApprovedBy" Type="varchar" MaxLength="100" />
+          <Property Name="DateUpdated" Type="datetime" />
+          <Property Name="DeletedFlag" Type="bit" />
+          <Property Name="Comment" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="DiscrepancyDetail">
+          <Key>
+            <PropertyRef Name="DiscrepancyID" />
+            <PropertyRef Name="ItemCode" />
+          </Key>
+          <Property Name="DiscrepancyID" Type="int" Nullable="false" />
+          <Property Name="ItemCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="Amount" Type="float" />
+          <Property Name="IsAdded" Type="bit" />
+          <Property Name="Reason" Type="varchar" MaxLength="150" />
+          <Property Name="DeletedFlag" Type="bit" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="EmployeeName" Type="varchar" MaxLength="250" />
+          <Property Name="DeptCode" Type="varchar" MaxLength="20" />
+          <Property Name="UserName" Type="varchar" MaxLength="255" />
+          <Property Name="Password" Type="varchar" MaxLength="255" />
+          <Property Name="RoleCode" Type="varchar" MaxLength="20" />
+          <Property Name="EmpContactNo" Type="varchar" MaxLength="50" />
+          <Property Name="EmpEmail" Type="varchar" MaxLength="100" />
+          <Property Name="DateUpdated" Type="datetime" />
+          <Property Name="DeletedFlag" Type="bit" />
+        </EntityType>
+        <EntityType Name="PurchaseOrder">
+          <Key>
+            <PropertyRef Name="PONumber" />
+          </Key>
+          <Property Name="PONumber" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Supplier" Type="varchar" MaxLength="20" />
+          <Property Name="DateRaised" Type="datetime" />
+          <Property Name="TotalAmount" Type="float" />
+          <Property Name="POStatus" Type="varchar" MaxLength="50" />
+          <Property Name="DateUpdated" Type="datetime" />
+          <Property Name="DeletedFlag" Type="bit" />
+          <Property Name="DeliveryDate" Type="datetime" />
+          <Property Name="DeliveryNo" Type="varchar" MaxLength="50" />
+          <Property Name="Comments" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="PurchaseOrderDetail">
+          <Key>
+            <PropertyRef Name="PONumber" />
+            <PropertyRef Name="ItemCode" />
+          </Key>
+          <Property Name="PONumber" Type="int" Nullable="false" />
+          <Property Name="ItemCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="Price" Type="float" />
+          <Property Name="DeletedFlag" Type="bit" />
+        </EntityType>
+        <EntityType Name="Request">
+          <Key>
+            <PropertyRef Name="RequestID" />
+          </Key>
+          <Property Name="RequestID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeID" Type="varchar" MaxLength="100" />
+          <Property Name="DateCreated" Type="datetime" />
+          <Property Name="RequestStatus" Type="varchar" MaxLength="50" />
+          <Property Name="Comments" Type="varchar" MaxLength="255" />
+          <Property Name="ApprovedBy" Type="varchar" MaxLength="100" />
+          <Property Name="DateUpdated" Type="datetime" />
+          <Property Name="DeletedFlag" Type="bit" />
+        </EntityType>
+        <EntityType Name="RequestDetail">
+          <Key>
+            <PropertyRef Name="RequestID" />
+            <PropertyRef Name="ItemCode" />
+          </Key>
+          <Property Name="RequestID" Type="int" Nullable="false" />
+          <Property Name="ItemCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="DeletedFlag" Type="bit" />
+        </EntityType>
+        <EntityType Name="StationeryDisbursement">
+          <Key>
+            <PropertyRef Name="DisbursementID" />
+          </Key>
+          <Property Name="DisbursementID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RetrievalID" Type="int" />
+          <Property Name="DeptCode" Type="varchar" MaxLength="20" />
+          <Property Name="DeptRep" Type="varchar" MaxLength="100" />
+          <Property Name="CollectionPoint" Type="varchar" MaxLength="20" />
+          <Property Name="DisbursementStatus" Type="varchar" MaxLength="50" />
+          <Property Name="DateUpdated" Type="datetime" />
+          <Property Name="DeletedFlag" Type="bit" />
+        </EntityType>
+        <EntityType Name="StationeryDisbursementDetail">
+          <Key>
+            <PropertyRef Name="DisbursementID" />
+            <PropertyRef Name="ItemCode" />
+          </Key>
+          <Property Name="DisbursementID" Type="int" Nullable="false" />
+          <Property Name="ItemCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="RequestedQty" Type="int" />
+          <Property Name="ActualQty" Type="int" />
+          <Property Name="DeletedFlag" Type="bit" />
+        </EntityType>
+        <EntityType Name="StationeryRetrieval">
+          <Key>
+            <PropertyRef Name="RetrievalID" />
+          </Key>
+          <Property Name="RetrievalID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DateRetrieved" Type="datetime" />
+          <Property Name="DeletedFlag" Type="bit" />
+          <Property Name="RetrievalStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="StationeryRetrievalDept">
+          <Key>
+            <PropertyRef Name="RetrievalByDeptID" />
+          </Key>
+          <Property Name="RetrievalByDeptID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RetrievalID" Type="int" />
+          <Property Name="DeptCode" Type="varchar" MaxLength="20" />
+          <Property Name="ItemCode" Type="varchar" MaxLength="50" />
+          <Property Name="RequestedQty" Type="int" />
+          <Property Name="ActualQty" Type="int" />
+          <Property Name="DeletedFlag" Type="bit" />
+        </EntityType>
+        <EntityType Name="StationeryRetrievalDetail">
+          <Key>
+            <PropertyRef Name="RetrievalID" />
+            <PropertyRef Name="ItemCode" />
+          </Key>
+          <Property Name="RetrievalID" Type="int" Nullable="false" />
+          <Property Name="ItemCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="RequestedQty" Type="int" />
+          <Property Name="AvailableQty" Type="int" />
+          <Property Name="DeletedFlag" Type="bit" />
+        </EntityType>
+        <EntityType Name="Stock">
+          <Key>
+            <PropertyRef Name="ItemCode" />
+          </Key>
+          <Property Name="ItemCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ItemCategory" Type="varchar" MaxLength="100" />
+          <Property Name="ItemDescription" Type="varchar" MaxLength="250" />
+          <Property Name="UnitOfMeasure" Type="varchar" MaxLength="50" />
+          <Property Name="Supplier1" Type="varchar" MaxLength="20" />
+          <Property Name="Price1" Type="float" />
+          <Property Name="Supplier2" Type="varchar" MaxLength="20" />
+          <Property Name="Price2" Type="float" />
+          <Property Name="Supplier3" Type="varchar" MaxLength="20" />
+          <Property Name="Price3" Type="float" />
+          <Property Name="ReorderLevel" Type="int" />
+          <Property Name="MinReorderQty" Type="int" />
+          <Property Name="AvailableQty" Type="int" />
+          <Property Name="BinNumber" Type="varchar" MaxLength="20" />
+          <Property Name="DateUpdated" Type="datetime" />
+          <Property Name="DeletedFlag" Type="bit" />
+        </EntityType>
+        <EntityType Name="Supplier">
+          <Key>
+            <PropertyRef Name="SupplierID" />
+          </Key>
+          <Property Name="SupplierID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="SupplierName" Type="varchar" MaxLength="150" />
+          <Property Name="ContactName" Type="varchar" MaxLength="150" />
+          <Property Name="ContactNo" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="varchar" MaxLength="255" />
+          <Property Name="DateUpdated" Type="datetime" />
+          <Property Name="DeletedFlag" Type="bit" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="RoleCode" />
+          </Key>
+          <Property Name="RoleCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="RoleDescription" Type="varchar" MaxLength="100" />
+          <Property Name="Dateupdated" Type="datetime" />
+          <Property Name="DeletedFlag" Type="bit" />
+        </EntityType>
+        <Association Name="fk_Delegation_EmployeeID">
+          <End Role="Employee" Type="SA38ADTeam6Model.Store.Employee" Multiplicity="0..1" />
+          <End Role="Delegation" Type="SA38ADTeam6Model.Store.Delegation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Delegation">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Department_CollectionPt">
+          <End Role="CollectionPoint" Type="SA38ADTeam6Model.Store.CollectionPoint" Multiplicity="0..1" />
+          <End Role="Department" Type="SA38ADTeam6Model.Store.Department" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CollectionPoint">
+              <PropertyRef Name="CollectionPointCode" />
+            </Principal>
+            <Dependent Role="Department">
+              <PropertyRef Name="CollectionPoint" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Department_DeptRep">
+          <End Role="Employee" Type="SA38ADTeam6Model.Store.Employee" Multiplicity="0..1" />
+          <End Role="Department" Type="SA38ADTeam6Model.Store.Department" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Department">
+              <PropertyRef Name="DeptRep" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Discrepancy_ApprovedBy">
+          <End Role="Employee" Type="SA38ADTeam6Model.Store.Employee" Multiplicity="0..1" />
+          <End Role="Discrepancy" Type="SA38ADTeam6Model.Store.Discrepancy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Discrepancy">
+              <PropertyRef Name="ApprovedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Discrepancy_RaisedBy">
+          <End Role="Employee" Type="SA38ADTeam6Model.Store.Employee" Multiplicity="0..1" />
+          <End Role="Discrepancy" Type="SA38ADTeam6Model.Store.Discrepancy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Discrepancy">
+              <PropertyRef Name="RaisedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_DiscrepancyDetail_DiscrepancyID">
+          <End Role="Discrepancy" Type="SA38ADTeam6Model.Store.Discrepancy" Multiplicity="1" />
+          <End Role="DiscrepancyDetail" Type="SA38ADTeam6Model.Store.DiscrepancyDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Discrepancy">
+              <PropertyRef Name="DiscrepancyID" />
+            </Principal>
+            <Dependent Role="DiscrepancyDetail">
+              <PropertyRef Name="DiscrepancyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_DiscrepancyDetail_ItemCode">
+          <End Role="Stock" Type="SA38ADTeam6Model.Store.Stock" Multiplicity="1" />
+          <End Role="DiscrepancyDetail" Type="SA38ADTeam6Model.Store.DiscrepancyDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Stock">
+              <PropertyRef Name="ItemCode" />
+            </Principal>
+            <Dependent Role="DiscrepancyDetail">
+              <PropertyRef Name="ItemCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Employee_DeptCode">
+          <End Role="Department" Type="SA38ADTeam6Model.Store.Department" Multiplicity="0..1" />
+          <End Role="Employee" Type="SA38ADTeam6Model.Store.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="DeptCode" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="DeptCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Employee_RoleCode">
+          <End Role="UserRole" Type="SA38ADTeam6Model.Store.UserRole" Multiplicity="0..1" />
+          <End Role="Employee" Type="SA38ADTeam6Model.Store.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserRole">
+              <PropertyRef Name="RoleCode" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="RoleCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_PurchaseOrder_Supplier">
+          <End Role="Supplier" Type="SA38ADTeam6Model.Store.Supplier" Multiplicity="0..1" />
+          <End Role="PurchaseOrder" Type="SA38ADTeam6Model.Store.PurchaseOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Supplier">
+              <PropertyRef Name="SupplierID" />
+            </Principal>
+            <Dependent Role="PurchaseOrder">
+              <PropertyRef Name="Supplier" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_PurchaseOrderDetail_ItemCode">
+          <End Role="Stock" Type="SA38ADTeam6Model.Store.Stock" Multiplicity="1" />
+          <End Role="PurchaseOrderDetail" Type="SA38ADTeam6Model.Store.PurchaseOrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Stock">
+              <PropertyRef Name="ItemCode" />
+            </Principal>
+            <Dependent Role="PurchaseOrderDetail">
+              <PropertyRef Name="ItemCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_PurchaseOrderDetail_PONumber">
+          <End Role="PurchaseOrder" Type="SA38ADTeam6Model.Store.PurchaseOrder" Multiplicity="1" />
+          <End Role="PurchaseOrderDetail" Type="SA38ADTeam6Model.Store.PurchaseOrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PurchaseOrder">
+              <PropertyRef Name="PONumber" />
+            </Principal>
+            <Dependent Role="PurchaseOrderDetail">
+              <PropertyRef Name="PONumber" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Request_ApprovedBy">
+          <End Role="Employee" Type="SA38ADTeam6Model.Store.Employee" Multiplicity="0..1" />
+          <End Role="Request" Type="SA38ADTeam6Model.Store.Request" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Request">
+              <PropertyRef Name="ApprovedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Request_EmployeeID">
+          <End Role="Employee" Type="SA38ADTeam6Model.Store.Employee" Multiplicity="0..1" />
+          <End Role="Request" Type="SA38ADTeam6Model.Store.Request" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Request">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_RequestDetail_ItemCode">
+          <End Role="Stock" Type="SA38ADTeam6Model.Store.Stock" Multiplicity="1" />
+          <End Role="RequestDetail" Type="SA38ADTeam6Model.Store.RequestDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Stock">
+              <PropertyRef Name="ItemCode" />
+            </Principal>
+            <Dependent Role="RequestDetail">
+              <PropertyRef Name="ItemCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_RequestDetail_RequestID">
+          <End Role="Request" Type="SA38ADTeam6Model.Store.Request" Multiplicity="1" />
+          <End Role="RequestDetail" Type="SA38ADTeam6Model.Store.RequestDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Request">
+              <PropertyRef Name="RequestID" />
+            </Principal>
+            <Dependent Role="RequestDetail">
+              <PropertyRef Name="RequestID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_StationeryDisbursement_CollectionPt">
+          <End Role="CollectionPoint" Type="SA38ADTeam6Model.Store.CollectionPoint" Multiplicity="0..1" />
+          <End Role="StationeryDisbursement" Type="SA38ADTeam6Model.Store.StationeryDisbursement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CollectionPoint">
+              <PropertyRef Name="CollectionPointCode" />
+            </Principal>
+            <Dependent Role="StationeryDisbursement">
+              <PropertyRef Name="CollectionPoint" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_StationeryDisbursement_DeptCode">
+          <End Role="Department" Type="SA38ADTeam6Model.Store.Department" Multiplicity="0..1" />
+          <End Role="StationeryDisbursement" Type="SA38ADTeam6Model.Store.StationeryDisbursement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="DeptCode" />
+            </Principal>
+            <Dependent Role="StationeryDisbursement">
+              <PropertyRef Name="DeptCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_StationeryDisbursement_DeptRep">
+          <End Role="Employee" Type="SA38ADTeam6Model.Store.Employee" Multiplicity="0..1" />
+          <End Role="StationeryDisbursement" Type="SA38ADTeam6Model.Store.StationeryDisbursement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="StationeryDisbursement">
+              <PropertyRef Name="DeptRep" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_StationeryDisbursement_RetrievalID">
+          <End Role="StationeryRetrieval" Type="SA38ADTeam6Model.Store.StationeryRetrieval" Multiplicity="0..1" />
+          <End Role="StationeryDisbursement" Type="SA38ADTeam6Model.Store.StationeryDisbursement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StationeryRetrieval">
+              <PropertyRef Name="RetrievalID" />
+            </Principal>
+            <Dependent Role="StationeryDisbursement">
+              <PropertyRef Name="RetrievalID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_StationeryDisbursementDetail_ItemCode">
+          <End Role="Stock" Type="SA38ADTeam6Model.Store.Stock" Multiplicity="1" />
+          <End Role="StationeryDisbursementDetail" Type="SA38ADTeam6Model.Store.StationeryDisbursementDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Stock">
+              <PropertyRef Name="ItemCode" />
+            </Principal>
+            <Dependent Role="StationeryDisbursementDetail">
+              <PropertyRef Name="ItemCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_StationeryRetrievalDept_DeptCode">
+          <End Role="Department" Type="SA38ADTeam6Model.Store.Department" Multiplicity="0..1" />
+          <End Role="StationeryRetrievalDept" Type="SA38ADTeam6Model.Store.StationeryRetrievalDept" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="DeptCode" />
+            </Principal>
+            <Dependent Role="StationeryRetrievalDept">
+              <PropertyRef Name="DeptCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_StationeryRetrievalDept_ItemCode">
+          <End Role="Stock" Type="SA38ADTeam6Model.Store.Stock" Multiplicity="0..1" />
+          <End Role="StationeryRetrievalDept" Type="SA38ADTeam6Model.Store.StationeryRetrievalDept" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Stock">
+              <PropertyRef Name="ItemCode" />
+            </Principal>
+            <Dependent Role="StationeryRetrievalDept">
+              <PropertyRef Name="ItemCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_StationeryRetrievalDept_RetrievalID">
+          <End Role="StationeryRetrieval" Type="SA38ADTeam6Model.Store.StationeryRetrieval" Multiplicity="0..1" />
+          <End Role="StationeryRetrievalDept" Type="SA38ADTeam6Model.Store.StationeryRetrievalDept" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StationeryRetrieval">
+              <PropertyRef Name="RetrievalID" />
+            </Principal>
+            <Dependent Role="StationeryRetrievalDept">
+              <PropertyRef Name="RetrievalID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_StationeryRetrievalDetail_ItemCode">
+          <End Role="Stock" Type="SA38ADTeam6Model.Store.Stock" Multiplicity="1" />
+          <End Role="StationeryRetrievalDetail" Type="SA38ADTeam6Model.Store.StationeryRetrievalDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Stock">
+              <PropertyRef Name="ItemCode" />
+            </Principal>
+            <Dependent Role="StationeryRetrievalDetail">
+              <PropertyRef Name="ItemCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Stock_Supplier1">
+          <End Role="Supplier" Type="SA38ADTeam6Model.Store.Supplier" Multiplicity="0..1" />
+          <End Role="Stock" Type="SA38ADTeam6Model.Store.Stock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Supplier">
+              <PropertyRef Name="SupplierID" />
+            </Principal>
+            <Dependent Role="Stock">
+              <PropertyRef Name="Supplier1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Stock_Supplier2">
+          <End Role="Supplier" Type="SA38ADTeam6Model.Store.Supplier" Multiplicity="0..1" />
+          <End Role="Stock" Type="SA38ADTeam6Model.Store.Stock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Supplier">
+              <PropertyRef Name="SupplierID" />
+            </Principal>
+            <Dependent Role="Stock">
+              <PropertyRef Name="Supplier2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Stock_Supplier3">
+          <End Role="Supplier" Type="SA38ADTeam6Model.Store.Supplier" Multiplicity="0..1" />
+          <End Role="Stock" Type="SA38ADTeam6Model.Store.Stock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Supplier">
+              <PropertyRef Name="SupplierID" />
+            </Principal>
+            <Dependent Role="Stock">
+              <PropertyRef Name="Supplier3" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SA38ADTeam6Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="SA38ADTeam6Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CollectionPoints" EntityType="SA38ADTeam6Model.CollectionPoint" />
+          <EntitySet Name="Delegations" EntityType="SA38ADTeam6Model.Delegation" />
+          <EntitySet Name="Departments" EntityType="SA38ADTeam6Model.Department" />
+          <EntitySet Name="Discrepancies" EntityType="SA38ADTeam6Model.Discrepancy" />
+          <EntitySet Name="DiscrepancyDetails" EntityType="SA38ADTeam6Model.DiscrepancyDetail" />
+          <EntitySet Name="Employees" EntityType="SA38ADTeam6Model.Employee" />
+          <EntitySet Name="PurchaseOrders" EntityType="SA38ADTeam6Model.PurchaseOrder" />
+          <EntitySet Name="PurchaseOrderDetails" EntityType="SA38ADTeam6Model.PurchaseOrderDetail" />
+          <EntitySet Name="Requests" EntityType="SA38ADTeam6Model.Request" />
+          <EntitySet Name="RequestDetails" EntityType="SA38ADTeam6Model.RequestDetail" />
+          <EntitySet Name="StationeryDisbursements" EntityType="SA38ADTeam6Model.StationeryDisbursement" />
+          <EntitySet Name="StationeryDisbursementDetails" EntityType="SA38ADTeam6Model.StationeryDisbursementDetail" />
+          <EntitySet Name="StationeryRetrievals" EntityType="SA38ADTeam6Model.StationeryRetrieval" />
+          <EntitySet Name="StationeryRetrievalDepts" EntityType="SA38ADTeam6Model.StationeryRetrievalDept" />
+          <EntitySet Name="StationeryRetrievalDetails" EntityType="SA38ADTeam6Model.StationeryRetrievalDetail" />
+          <EntitySet Name="Stocks" EntityType="SA38ADTeam6Model.Stock" />
+          <EntitySet Name="Suppliers" EntityType="SA38ADTeam6Model.Supplier" />
+          <EntitySet Name="UserRoles" EntityType="SA38ADTeam6Model.UserRole" />
+          <AssociationSet Name="fk_Department_CollectionPt" Association="SA38ADTeam6Model.fk_Department_CollectionPt">
+            <End Role="CollectionPoint" EntitySet="CollectionPoints" />
+            <End Role="Department" EntitySet="Departments" />
+          </AssociationSet>
+          <AssociationSet Name="fk_StationeryDisbursement_CollectionPt" Association="SA38ADTeam6Model.fk_StationeryDisbursement_CollectionPt">
+            <End Role="CollectionPoint" EntitySet="CollectionPoints" />
+            <End Role="StationeryDisbursement" EntitySet="StationeryDisbursements" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Delegation_EmployeeID" Association="SA38ADTeam6Model.fk_Delegation_EmployeeID">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="Delegation" EntitySet="Delegations" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Department_DeptRep" Association="SA38ADTeam6Model.fk_Department_DeptRep">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="Department" EntitySet="Departments" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Employee_DeptCode" Association="SA38ADTeam6Model.fk_Employee_DeptCode">
+            <End Role="Department" EntitySet="Departments" />
+            <End Role="Employee" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="fk_StationeryDisbursement_DeptCode" Association="SA38ADTeam6Model.fk_StationeryDisbursement_DeptCode">
+            <End Role="Department" EntitySet="Departments" />
+            <End Role="StationeryDisbursement" EntitySet="StationeryDisbursements" />
+          </AssociationSet>
+          <AssociationSet Name="fk_StationeryRetrievalDept_DeptCode" Association="SA38ADTeam6Model.fk_StationeryRetrievalDept_DeptCode">
+            <End Role="Department" EntitySet="Departments" />
+            <End Role="StationeryRetrievalDept" EntitySet="StationeryRetrievalDepts" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Discrepancy_ApprovedBy" Association="SA38ADTeam6Model.fk_Discrepancy_ApprovedBy">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="Discrepancy" EntitySet="Discrepancies" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Discrepancy_RaisedBy" Association="SA38ADTeam6Model.fk_Discrepancy_RaisedBy">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="Discrepancy" EntitySet="Discrepancies" />
+          </AssociationSet>
+          <AssociationSet Name="fk_DiscrepancyDetail_DiscrepancyID" Association="SA38ADTeam6Model.fk_DiscrepancyDetail_DiscrepancyID">
+            <End Role="Discrepancy" EntitySet="Discrepancies" />
+            <End Role="DiscrepancyDetail" EntitySet="DiscrepancyDetails" />
+          </AssociationSet>
+          <AssociationSet Name="fk_DiscrepancyDetail_ItemCode" Association="SA38ADTeam6Model.fk_DiscrepancyDetail_ItemCode">
+            <End Role="Stock" EntitySet="Stocks" />
+            <End Role="DiscrepancyDetail" EntitySet="DiscrepancyDetails" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Employee_RoleCode" Association="SA38ADTeam6Model.fk_Employee_RoleCode">
+            <End Role="UserRole" EntitySet="UserRoles" />
+            <End Role="Employee" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Request_ApprovedBy" Association="SA38ADTeam6Model.fk_Request_ApprovedBy">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="Request" EntitySet="Requests" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Request_EmployeeID" Association="SA38ADTeam6Model.fk_Request_EmployeeID">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="Request" EntitySet="Requests" />
+          </AssociationSet>
+          <AssociationSet Name="fk_StationeryDisbursement_DeptRep" Association="SA38ADTeam6Model.fk_StationeryDisbursement_DeptRep">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="StationeryDisbursement" EntitySet="StationeryDisbursements" />
+          </AssociationSet>
+          <AssociationSet Name="fk_PurchaseOrder_Supplier" Association="SA38ADTeam6Model.fk_PurchaseOrder_Supplier">
+            <End Role="Supplier" EntitySet="Suppliers" />
+            <End Role="PurchaseOrder" EntitySet="PurchaseOrders" />
+          </AssociationSet>
+          <AssociationSet Name="fk_PurchaseOrderDetail_PONumber" Association="SA38ADTeam6Model.fk_PurchaseOrderDetail_PONumber">
+            <End Role="PurchaseOrder" EntitySet="PurchaseOrders" />
+            <End Role="PurchaseOrderDetail" EntitySet="PurchaseOrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="fk_PurchaseOrderDetail_ItemCode" Association="SA38ADTeam6Model.fk_PurchaseOrderDetail_ItemCode">
+            <End Role="Stock" EntitySet="Stocks" />
+            <End Role="PurchaseOrderDetail" EntitySet="PurchaseOrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="fk_RequestDetail_RequestID" Association="SA38ADTeam6Model.fk_RequestDetail_RequestID">
+            <End Role="Request" EntitySet="Requests" />
+            <End Role="RequestDetail" EntitySet="RequestDetails" />
+          </AssociationSet>
+          <AssociationSet Name="fk_RequestDetail_ItemCode" Association="SA38ADTeam6Model.fk_RequestDetail_ItemCode">
+            <End Role="Stock" EntitySet="Stocks" />
+            <End Role="RequestDetail" EntitySet="RequestDetails" />
+          </AssociationSet>
+          <AssociationSet Name="fk_StationeryDisbursement_RetrievalID" Association="SA38ADTeam6Model.fk_StationeryDisbursement_RetrievalID">
+            <End Role="StationeryRetrieval" EntitySet="StationeryRetrievals" />
+            <End Role="StationeryDisbursement" EntitySet="StationeryDisbursements" />
+          </AssociationSet>
+          <AssociationSet Name="fk_StationeryDisbursementDetail_ItemCode" Association="SA38ADTeam6Model.fk_StationeryDisbursementDetail_ItemCode">
+            <End Role="Stock" EntitySet="Stocks" />
+            <End Role="StationeryDisbursementDetail" EntitySet="StationeryDisbursementDetails" />
+          </AssociationSet>
+          <AssociationSet Name="fk_StationeryRetrievalDept_RetrievalID" Association="SA38ADTeam6Model.fk_StationeryRetrievalDept_RetrievalID">
+            <End Role="StationeryRetrieval" EntitySet="StationeryRetrievals" />
+            <End Role="StationeryRetrievalDept" EntitySet="StationeryRetrievalDepts" />
+          </AssociationSet>
+          <AssociationSet Name="fk_StationeryRetrievalDept_ItemCode" Association="SA38ADTeam6Model.fk_StationeryRetrievalDept_ItemCode">
+            <End Role="Stock" EntitySet="Stocks" />
+            <End Role="StationeryRetrievalDept" EntitySet="StationeryRetrievalDepts" />
+          </AssociationSet>
+          <AssociationSet Name="fk_StationeryRetrievalDetail_ItemCode" Association="SA38ADTeam6Model.fk_StationeryRetrievalDetail_ItemCode">
+            <End Role="Stock" EntitySet="Stocks" />
+            <End Role="StationeryRetrievalDetail" EntitySet="StationeryRetrievalDetails" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Stock_Supplier1" Association="SA38ADTeam6Model.fk_Stock_Supplier1">
+            <End Role="Supplier" EntitySet="Suppliers" />
+            <End Role="Stock" EntitySet="Stocks" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Stock_Supplier2" Association="SA38ADTeam6Model.fk_Stock_Supplier2">
+            <End Role="Supplier" EntitySet="Suppliers" />
+            <End Role="Stock" EntitySet="Stocks" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Stock_Supplier3" Association="SA38ADTeam6Model.fk_Stock_Supplier3">
+            <End Role="Supplier" EntitySet="Suppliers" />
+            <End Role="Stock" EntitySet="Stocks" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="CollectionPoint">
+          <Key>
+            <PropertyRef Name="CollectionPointCode" />
+          </Key>
+          <Property Name="CollectionPointCode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="CollectionPointName" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="CollectionTime" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="DateUpdated" Type="DateTime" />
+          <Property Name="DeletedFlag" Type="Boolean" />
+          <NavigationProperty Name="Departments" Relationship="SA38ADTeam6Model.fk_Department_CollectionPt" FromRole="CollectionPoint" ToRole="Department" />
+          <NavigationProperty Name="StationeryDisbursements" Relationship="SA38ADTeam6Model.fk_StationeryDisbursement_CollectionPt" FromRole="CollectionPoint" ToRole="StationeryDisbursement" />
+        </EntityType>
+        <EntityType Name="Delegation">
+          <Key>
+            <PropertyRef Name="DelegationID" />
+          </Key>
+          <Property Name="DelegationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeID" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="StartDate" Type="DateTime" />
+          <Property Name="EndDate" Type="DateTime" />
+          <Property Name="DelegatedFlag" Type="Boolean" />
+          <NavigationProperty Name="Employee" Relationship="SA38ADTeam6Model.fk_Delegation_EmployeeID" FromRole="Delegation" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="DeptCode" />
+          </Key>
+          <Property Name="DeptCode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="DeptName" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="CollectionPoint" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="DeptContactNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DeptCollectionPin" Type="Int32" />
+          <Property Name="DateUpdated" Type="DateTime" />
+          <Property Name="DeletedFlag" Type="Boolean" />
+          <Property Name="DeptRep" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="CollectionPoint1" Relationship="SA38ADTeam6Model.fk_Department_CollectionPt" FromRole="Department" ToRole="CollectionPoint" />
+          <NavigationProperty Name="Employee" Relationship="SA38ADTeam6Model.fk_Department_DeptRep" FromRole="Department" ToRole="Employee" />
+          <NavigationProperty Name="Employees" Relationship="SA38ADTeam6Model.fk_Employee_DeptCode" FromRole="Department" ToRole="Employee" />
+          <NavigationProperty Name="StationeryDisbursements" Relationship="SA38ADTeam6Model.fk_StationeryDisbursement_DeptCode" FromRole="Department" ToRole="StationeryDisbursement" />
+          <NavigationProperty Name="StationeryRetrievalDepts" Relationship="SA38ADTeam6Model.fk_StationeryRetrievalDept_DeptCode" FromRole="Department" ToRole="StationeryRetrievalDept" />
+        </EntityType>
+        <EntityType Name="Discrepancy">
+          <Key>
+            <PropertyRef Name="DiscrepancyID" />
+          </Key>
+          <Property Name="DiscrepancyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateRaised" Type="DateTime" />
+          <Property Name="RaisedBy" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="TotalAmount" Type="Double" />
+          <Property Name="DiscrepancyStatus" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ApprovedBy" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="DateUpdated" Type="DateTime" />
+          <Property Name="DeletedFlag" Type="Boolean" />
+          <NavigationProperty Name="Employee" Relationship="SA38ADTeam6Model.fk_Discrepancy_ApprovedBy" FromRole="Discrepancy" ToRole="Employee" />
+          <NavigationProperty Name="Employee1" Relationship="SA38ADTeam6Model.fk_Discrepancy_RaisedBy" FromRole="Discrepancy" ToRole="Employee" />
+          <NavigationProperty Name="DiscrepancyDetails" Relationship="SA38ADTeam6Model.fk_DiscrepancyDetail_DiscrepancyID" FromRole="Discrepancy" ToRole="DiscrepancyDetail" />
+          <Property Type="String" Name="Comment" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="DiscrepancyDetail">
+          <Key>
+            <PropertyRef Name="DiscrepancyID" />
+            <PropertyRef Name="ItemCode" />
+          </Key>
+          <Property Name="DiscrepancyID" Type="Int32" Nullable="false" />
+          <Property Name="ItemCode" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Quantity" Type="Int32" />
+          <Property Name="Amount" Type="Double" />
+          <Property Name="IsAdded" Type="Boolean" />
+          <Property Name="Reason" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="DeletedFlag" Type="Boolean" />
+          <NavigationProperty Name="Discrepancy" Relationship="SA38ADTeam6Model.fk_DiscrepancyDetail_DiscrepancyID" FromRole="DiscrepancyDetail" ToRole="Discrepancy" />
+          <NavigationProperty Name="Stock" Relationship="SA38ADTeam6Model.fk_DiscrepancyDetail_ItemCode" FromRole="DiscrepancyDetail" ToRole="Stock" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="EmployeeName" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="DeptCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="UserName" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Password" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="RoleCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="EmpContactNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="EmpEmail" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="DateUpdated" Type="DateTime" />
+          <Property Name="DeletedFlag" Type="Boolean" />
+          <NavigationProperty Name="Delegations" Relationship="SA38ADTeam6Model.fk_Delegation_EmployeeID" FromRole="Employee" ToRole="Delegation" />
+          <NavigationProperty Name="Departments" Relationship="SA38ADTeam6Model.fk_Department_DeptRep" FromRole="Employee" ToRole="Department" />
+          <NavigationProperty Name="Department" Relationship="SA38ADTeam6Model.fk_Employee_DeptCode" FromRole="Employee" ToRole="Department" />
+          <NavigationProperty Name="Discrepancies" Relationship="SA38ADTeam6Model.fk_Discrepancy_ApprovedBy" FromRole="Employee" ToRole="Discrepancy" />
+          <NavigationProperty Name="Discrepancies1" Relationship="SA38ADTeam6Model.fk_Discrepancy_RaisedBy" FromRole="Employee" ToRole="Discrepancy" />
+          <NavigationProperty Name="UserRole" Relationship="SA38ADTeam6Model.fk_Employee_RoleCode" FromRole="Employee" ToRole="UserRole" />
+          <NavigationProperty Name="Requests" Relationship="SA38ADTeam6Model.fk_Request_ApprovedBy" FromRole="Employee" ToRole="Request" />
+          <NavigationProperty Name="Requests1" Relationship="SA38ADTeam6Model.fk_Request_EmployeeID" FromRole="Employee" ToRole="Request" />
+          <NavigationProperty Name="StationeryDisbursements" Relationship="SA38ADTeam6Model.fk_StationeryDisbursement_DeptRep" FromRole="Employee" ToRole="StationeryDisbursement" />
+        </EntityType>
+        <EntityType Name="PurchaseOrder">
+          <Key>
+            <PropertyRef Name="PONumber" />
+          </Key>
+          <Property Name="PONumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Supplier" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="DateRaised" Type="DateTime" />
+          <Property Name="TotalAmount" Type="Double" />
+          <Property Name="POStatus" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DateUpdated" Type="DateTime" />
+          <Property Name="DeletedFlag" Type="Boolean" />
+          <NavigationProperty Name="Supplier1" Relationship="SA38ADTeam6Model.fk_PurchaseOrder_Supplier" FromRole="PurchaseOrder" ToRole="Supplier" />
+          <NavigationProperty Name="PurchaseOrderDetails" Relationship="SA38ADTeam6Model.fk_PurchaseOrderDetail_PONumber" FromRole="PurchaseOrder" ToRole="PurchaseOrderDetail" />
+          <Property Type="DateTime" Name="DeliveryDate" />
+          <Property Type="String" Name="DeliveryNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Comments" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="PurchaseOrderDetail">
+          <Key>
+            <PropertyRef Name="PONumber" />
+            <PropertyRef Name="ItemCode" />
+          </Key>
+          <Property Name="PONumber" Type="Int32" Nullable="false" />
+          <Property Name="ItemCode" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Quantity" Type="Int32" />
+          <Property Name="Price" Type="Double" />
+          <Property Name="DeletedFlag" Type="Boolean" />
+          <NavigationProperty Name="PurchaseOrder" Relationship="SA38ADTeam6Model.fk_PurchaseOrderDetail_PONumber" FromRole="PurchaseOrderDetail" ToRole="PurchaseOrder" />
+          <NavigationProperty Name="Stock" Relationship="SA38ADTeam6Model.fk_PurchaseOrderDetail_ItemCode" FromRole="PurchaseOrderDetail" ToRole="Stock" />
+        </EntityType>
+        <EntityType Name="Request">
+          <Key>
+            <PropertyRef Name="RequestID" />
+          </Key>
+          <Property Name="RequestID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeID" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="DateCreated" Type="DateTime" />
+          <Property Name="RequestStatus" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Comments" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="ApprovedBy" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="DateUpdated" Type="DateTime" />
+          <Property Name="DeletedFlag" Type="Boolean" />
+          <NavigationProperty Name="Employee" Relationship="SA38ADTeam6Model.fk_Request_ApprovedBy" FromRole="Request" ToRole="Employee" />
+          <NavigationProperty Name="Employee1" Relationship="SA38ADTeam6Model.fk_Request_EmployeeID" FromRole="Request" ToRole="Employee" />
+          <NavigationProperty Name="RequestDetails" Relationship="SA38ADTeam6Model.fk_RequestDetail_RequestID" FromRole="Request" ToRole="RequestDetail" />
+        </EntityType>
+        <EntityType Name="RequestDetail">
+          <Key>
+            <PropertyRef Name="RequestID" />
+            <PropertyRef Name="ItemCode" />
+          </Key>
+          <Property Name="RequestID" Type="Int32" Nullable="false" />
+          <Property Name="ItemCode" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Quantity" Type="Int32" />
+          <Property Name="DeletedFlag" Type="Boolean" />
+          <NavigationProperty Name="Request" Relationship="SA38ADTeam6Model.fk_RequestDetail_RequestID" FromRole="RequestDetail" ToRole="Request" />
+          <NavigationProperty Name="Stock" Relationship="SA38ADTeam6Model.fk_RequestDetail_ItemCode" FromRole="RequestDetail" ToRole="Stock" />
+        </EntityType>
+        <EntityType Name="StationeryDisbursement">
+          <Key>
+            <PropertyRef Name="DisbursementID" />
+          </Key>
+          <Property Name="DisbursementID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RetrievalID" Type="Int32" />
+          <Property Name="DeptCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="DeptRep" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="CollectionPoint" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="DisbursementStatus" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DateUpdated" Type="DateTime" />
+          <Property Name="DeletedFlag" Type="Boolean" />
+          <NavigationProperty Name="CollectionPoint1" Relationship="SA38ADTeam6Model.fk_StationeryDisbursement_CollectionPt" FromRole="StationeryDisbursement" ToRole="CollectionPoint" />
+          <NavigationProperty Name="Department" Relationship="SA38ADTeam6Model.fk_StationeryDisbursement_DeptCode" FromRole="StationeryDisbursement" ToRole="Department" />
+          <NavigationProperty Name="Employee" Relationship="SA38ADTeam6Model.fk_StationeryDisbursement_DeptRep" FromRole="StationeryDisbursement" ToRole="Employee" />
+          <NavigationProperty Name="StationeryRetrieval" Relationship="SA38ADTeam6Model.fk_StationeryDisbursement_RetrievalID" FromRole="StationeryDisbursement" ToRole="StationeryRetrieval" />
+        </EntityType>
+        <EntityType Name="StationeryDisbursementDetail">
+          <Key>
+            <PropertyRef Name="DisbursementID" />
+            <PropertyRef Name="ItemCode" />
+          </Key>
+          <Property Name="DisbursementID" Type="Int32" Nullable="false" />
+          <Property Name="ItemCode" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="RequestedQty" Type="Int32" />
+          <Property Name="ActualQty" Type="Int32" />
+          <Property Name="DeletedFlag" Type="Boolean" />
+          <NavigationProperty Name="Stock" Relationship="SA38ADTeam6Model.fk_StationeryDisbursementDetail_ItemCode" FromRole="StationeryDisbursementDetail" ToRole="Stock" />
+        </EntityType>
+        <EntityType Name="StationeryRetrieval">
+          <Key>
+            <PropertyRef Name="RetrievalID" />
+          </Key>
+          <Property Name="RetrievalID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateRetrieved" Type="DateTime" />
+          <Property Name="DeletedFlag" Type="Boolean" />
+          <NavigationProperty Name="StationeryDisbursements" Relationship="SA38ADTeam6Model.fk_StationeryDisbursement_RetrievalID" FromRole="StationeryRetrieval" ToRole="StationeryDisbursement" />
+          <NavigationProperty Name="StationeryRetrievalDepts" Relationship="SA38ADTeam6Model.fk_StationeryRetrievalDept_RetrievalID" FromRole="StationeryRetrieval" ToRole="StationeryRetrievalDept" />
+          <Property Type="Boolean" Name="RetrievalStatus" />
+        </EntityType>
+        <EntityType Name="StationeryRetrievalDept">
+          <Key>
+            <PropertyRef Name="RetrievalByDeptID" />
+          </Key>
+          <Property Name="RetrievalByDeptID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RetrievalID" Type="Int32" />
+          <Property Name="DeptCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ItemCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="RequestedQty" Type="Int32" />
+          <Property Name="ActualQty" Type="Int32" />
+          <Property Name="DeletedFlag" Type="Boolean" />
+          <NavigationProperty Name="Department" Relationship="SA38ADTeam6Model.fk_StationeryRetrievalDept_DeptCode" FromRole="StationeryRetrievalDept" ToRole="Department" />
+          <NavigationProperty Name="StationeryRetrieval" Relationship="SA38ADTeam6Model.fk_StationeryRetrievalDept_RetrievalID" FromRole="StationeryRetrievalDept" ToRole="StationeryRetrieval" />
+          <NavigationProperty Name="Stock" Relationship="SA38ADTeam6Model.fk_StationeryRetrievalDept_ItemCode" FromRole="StationeryRetrievalDept" ToRole="Stock" />
+        </EntityType>
+        <EntityType Name="StationeryRetrievalDetail">
+          <Key>
+            <PropertyRef Name="RetrievalID" />
+            <PropertyRef Name="ItemCode" />
+          </Key>
+          <Property Name="RetrievalID" Type="Int32" Nullable="false" />
+          <Property Name="ItemCode" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="RequestedQty" Type="Int32" />
+          <Property Name="AvailableQty" Type="Int32" />
+          <Property Name="DeletedFlag" Type="Boolean" />
+          <NavigationProperty Name="Stock" Relationship="SA38ADTeam6Model.fk_StationeryRetrievalDetail_ItemCode" FromRole="StationeryRetrievalDetail" ToRole="Stock" />
+        </EntityType>
+        <EntityType Name="Stock">
+          <Key>
+            <PropertyRef Name="ItemCode" />
+          </Key>
+          <Property Name="ItemCode" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ItemCategory" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="ItemDescription" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="UnitOfMeasure" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Supplier1" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Price1" Type="Double" />
+          <Property Name="Supplier2" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Price2" Type="Double" />
+          <Property Name="Supplier3" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Price3" Type="Double" />
+          <Property Name="ReorderLevel" Type="Int32" />
+          <Property Name="MinReorderQty" Type="Int32" />
+          <Property Name="AvailableQty" Type="Int32" />
+          <Property Name="BinNumber" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="DateUpdated" Type="DateTime" />
+          <Property Name="DeletedFlag" Type="Boolean" />
+          <NavigationProperty Name="DiscrepancyDetails" Relationship="SA38ADTeam6Model.fk_DiscrepancyDetail_ItemCode" FromRole="Stock" ToRole="DiscrepancyDetail" />
+          <NavigationProperty Name="PurchaseOrderDetails" Relationship="SA38ADTeam6Model.fk_PurchaseOrderDetail_ItemCode" FromRole="Stock" ToRole="PurchaseOrderDetail" />
+          <NavigationProperty Name="RequestDetails" Relationship="SA38ADTeam6Model.fk_RequestDetail_ItemCode" FromRole="Stock" ToRole="RequestDetail" />
+          <NavigationProperty Name="StationeryDisbursementDetails" Relationship="SA38ADTeam6Model.fk_StationeryDisbursementDetail_ItemCode" FromRole="Stock" ToRole="StationeryDisbursementDetail" />
+          <NavigationProperty Name="StationeryRetrievalDepts" Relationship="SA38ADTeam6Model.fk_StationeryRetrievalDept_ItemCode" FromRole="Stock" ToRole="StationeryRetrievalDept" />
+          <NavigationProperty Name="StationeryRetrievalDetails" Relationship="SA38ADTeam6Model.fk_StationeryRetrievalDetail_ItemCode" FromRole="Stock" ToRole="StationeryRetrievalDetail" />
+          <NavigationProperty Name="Supplier" Relationship="SA38ADTeam6Model.fk_Stock_Supplier1" FromRole="Stock" ToRole="Supplier" />
+          <NavigationProperty Name="Supplier4" Relationship="SA38ADTeam6Model.fk_Stock_Supplier2" FromRole="Stock" ToRole="Supplier" />
+          <NavigationProperty Name="Supplier5" Relationship="SA38ADTeam6Model.fk_Stock_Supplier3" FromRole="Stock" ToRole="Supplier" />
+        </EntityType>
+        <EntityType Name="Supplier">
+          <Key>
+            <PropertyRef Name="SupplierID" />
+          </Key>
+          <Property Name="SupplierID" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="SupplierName" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="ContactName" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="ContactNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Address" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="DateUpdated" Type="DateTime" />
+          <Property Name="DeletedFlag" Type="Boolean" />
+          <NavigationProperty Name="PurchaseOrders" Relationship="SA38ADTeam6Model.fk_PurchaseOrder_Supplier" FromRole="Supplier" ToRole="PurchaseOrder" />
+          <NavigationProperty Name="Stocks" Relationship="SA38ADTeam6Model.fk_Stock_Supplier1" FromRole="Supplier" ToRole="Stock" />
+          <NavigationProperty Name="Stocks1" Relationship="SA38ADTeam6Model.fk_Stock_Supplier2" FromRole="Supplier" ToRole="Stock" />
+          <NavigationProperty Name="Stocks2" Relationship="SA38ADTeam6Model.fk_Stock_Supplier3" FromRole="Supplier" ToRole="Stock" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="RoleCode" />
+          </Key>
+          <Property Name="RoleCode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="RoleDescription" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Dateupdated" Type="DateTime" />
+          <Property Name="DeletedFlag" Type="Boolean" />
+          <NavigationProperty Name="Employees" Relationship="SA38ADTeam6Model.fk_Employee_RoleCode" FromRole="UserRole" ToRole="Employee" />
+        </EntityType>
+        <Association Name="fk_Department_CollectionPt">
+          <End Role="CollectionPoint" Type="SA38ADTeam6Model.CollectionPoint" Multiplicity="0..1" />
+          <End Role="Department" Type="SA38ADTeam6Model.Department" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CollectionPoint">
+              <PropertyRef Name="CollectionPointCode" />
+            </Principal>
+            <Dependent Role="Department">
+              <PropertyRef Name="CollectionPoint" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_StationeryDisbursement_CollectionPt">
+          <End Role="CollectionPoint" Type="SA38ADTeam6Model.CollectionPoint" Multiplicity="0..1" />
+          <End Role="StationeryDisbursement" Type="SA38ADTeam6Model.StationeryDisbursement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CollectionPoint">
+              <PropertyRef Name="CollectionPointCode" />
+            </Principal>
+            <Dependent Role="StationeryDisbursement">
+              <PropertyRef Name="CollectionPoint" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Delegation_EmployeeID">
+          <End Role="Employee" Type="SA38ADTeam6Model.Employee" Multiplicity="0..1" />
+          <End Role="Delegation" Type="SA38ADTeam6Model.Delegation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Delegation">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Department_DeptRep">
+          <End Role="Employee" Type="SA38ADTeam6Model.Employee" Multiplicity="0..1" />
+          <End Role="Department" Type="SA38ADTeam6Model.Department" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Department">
+              <PropertyRef Name="DeptRep" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Employee_DeptCode">
+          <End Role="Department" Type="SA38ADTeam6Model.Department" Multiplicity="0..1" />
+          <End Role="Employee" Type="SA38ADTeam6Model.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="DeptCode" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="DeptCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_StationeryDisbursement_DeptCode">
+          <End Role="Department" Type="SA38ADTeam6Model.Department" Multiplicity="0..1" />
+          <End Role="StationeryDisbursement" Type="SA38ADTeam6Model.StationeryDisbursement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="DeptCode" />
+            </Principal>
+            <Dependent Role="StationeryDisbursement">
+              <PropertyRef Name="DeptCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_StationeryRetrievalDept_DeptCode">
+          <End Role="Department" Type="SA38ADTeam6Model.Department" Multiplicity="0..1" />
+          <End Role="StationeryRetrievalDept" Type="SA38ADTeam6Model.StationeryRetrievalDept" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="DeptCode" />
+            </Principal>
+            <Dependent Role="StationeryRetrievalDept">
+              <PropertyRef Name="DeptCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Discrepancy_ApprovedBy">
+          <End Role="Employee" Type="SA38ADTeam6Model.Employee" Multiplicity="0..1" />
+          <End Role="Discrepancy" Type="SA38ADTeam6Model.Discrepancy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Discrepancy">
+              <PropertyRef Name="ApprovedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Discrepancy_RaisedBy">
+          <End Role="Employee" Type="SA38ADTeam6Model.Employee" Multiplicity="0..1" />
+          <End Role="Discrepancy" Type="SA38ADTeam6Model.Discrepancy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Discrepancy">
+              <PropertyRef Name="RaisedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_DiscrepancyDetail_DiscrepancyID">
+          <End Role="Discrepancy" Type="SA38ADTeam6Model.Discrepancy" Multiplicity="1" />
+          <End Role="DiscrepancyDetail" Type="SA38ADTeam6Model.DiscrepancyDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Discrepancy">
+              <PropertyRef Name="DiscrepancyID" />
+            </Principal>
+            <Dependent Role="DiscrepancyDetail">
+              <PropertyRef Name="DiscrepancyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_DiscrepancyDetail_ItemCode">
+          <End Role="Stock" Type="SA38ADTeam6Model.Stock" Multiplicity="1" />
+          <End Role="DiscrepancyDetail" Type="SA38ADTeam6Model.DiscrepancyDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Stock">
+              <PropertyRef Name="ItemCode" />
+            </Principal>
+            <Dependent Role="DiscrepancyDetail">
+              <PropertyRef Name="ItemCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Employee_RoleCode">
+          <End Role="UserRole" Type="SA38ADTeam6Model.UserRole" Multiplicity="0..1" />
+          <End Role="Employee" Type="SA38ADTeam6Model.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserRole">
+              <PropertyRef Name="RoleCode" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="RoleCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Request_ApprovedBy">
+          <End Role="Employee" Type="SA38ADTeam6Model.Employee" Multiplicity="0..1" />
+          <End Role="Request" Type="SA38ADTeam6Model.Request" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Request">
+              <PropertyRef Name="ApprovedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Request_EmployeeID">
+          <End Role="Employee" Type="SA38ADTeam6Model.Employee" Multiplicity="0..1" />
+          <End Role="Request" Type="SA38ADTeam6Model.Request" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Request">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_StationeryDisbursement_DeptRep">
+          <End Role="Employee" Type="SA38ADTeam6Model.Employee" Multiplicity="0..1" />
+          <End Role="StationeryDisbursement" Type="SA38ADTeam6Model.StationeryDisbursement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="StationeryDisbursement">
+              <PropertyRef Name="DeptRep" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_PurchaseOrder_Supplier">
+          <End Role="Supplier" Type="SA38ADTeam6Model.Supplier" Multiplicity="0..1" />
+          <End Role="PurchaseOrder" Type="SA38ADTeam6Model.PurchaseOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Supplier">
+              <PropertyRef Name="SupplierID" />
+            </Principal>
+            <Dependent Role="PurchaseOrder">
+              <PropertyRef Name="Supplier" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_PurchaseOrderDetail_PONumber">
+          <End Role="PurchaseOrder" Type="SA38ADTeam6Model.PurchaseOrder" Multiplicity="1" />
+          <End Role="PurchaseOrderDetail" Type="SA38ADTeam6Model.PurchaseOrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PurchaseOrder">
+              <PropertyRef Name="PONumber" />
+            </Principal>
+            <Dependent Role="PurchaseOrderDetail">
+              <PropertyRef Name="PONumber" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_PurchaseOrderDetail_ItemCode">
+          <End Role="Stock" Type="SA38ADTeam6Model.Stock" Multiplicity="1" />
+          <End Role="PurchaseOrderDetail" Type="SA38ADTeam6Model.PurchaseOrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Stock">
+              <PropertyRef Name="ItemCode" />
+            </Principal>
+            <Dependent Role="PurchaseOrderDetail">
+              <PropertyRef Name="ItemCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_RequestDetail_RequestID">
+          <End Role="Request" Type="SA38ADTeam6Model.Request" Multiplicity="1" />
+          <End Role="RequestDetail" Type="SA38ADTeam6Model.RequestDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Request">
+              <PropertyRef Name="RequestID" />
+            </Principal>
+            <Dependent Role="RequestDetail">
+              <PropertyRef Name="RequestID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_RequestDetail_ItemCode">
+          <End Role="Stock" Type="SA38ADTeam6Model.Stock" Multiplicity="1" />
+          <End Role="RequestDetail" Type="SA38ADTeam6Model.RequestDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Stock">
+              <PropertyRef Name="ItemCode" />
+            </Principal>
+            <Dependent Role="RequestDetail">
+              <PropertyRef Name="ItemCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_StationeryDisbursement_RetrievalID">
+          <End Role="StationeryRetrieval" Type="SA38ADTeam6Model.StationeryRetrieval" Multiplicity="0..1" />
+          <End Role="StationeryDisbursement" Type="SA38ADTeam6Model.StationeryDisbursement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StationeryRetrieval">
+              <PropertyRef Name="RetrievalID" />
+            </Principal>
+            <Dependent Role="StationeryDisbursement">
+              <PropertyRef Name="RetrievalID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_StationeryDisbursementDetail_ItemCode">
+          <End Role="Stock" Type="SA38ADTeam6Model.Stock" Multiplicity="1" />
+          <End Role="StationeryDisbursementDetail" Type="SA38ADTeam6Model.StationeryDisbursementDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Stock">
+              <PropertyRef Name="ItemCode" />
+            </Principal>
+            <Dependent Role="StationeryDisbursementDetail">
+              <PropertyRef Name="ItemCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_StationeryRetrievalDept_RetrievalID">
+          <End Role="StationeryRetrieval" Type="SA38ADTeam6Model.StationeryRetrieval" Multiplicity="0..1" />
+          <End Role="StationeryRetrievalDept" Type="SA38ADTeam6Model.StationeryRetrievalDept" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StationeryRetrieval">
+              <PropertyRef Name="RetrievalID" />
+            </Principal>
+            <Dependent Role="StationeryRetrievalDept">
+              <PropertyRef Name="RetrievalID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_StationeryRetrievalDept_ItemCode">
+          <End Role="Stock" Type="SA38ADTeam6Model.Stock" Multiplicity="0..1" />
+          <End Role="StationeryRetrievalDept" Type="SA38ADTeam6Model.StationeryRetrievalDept" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Stock">
+              <PropertyRef Name="ItemCode" />
+            </Principal>
+            <Dependent Role="StationeryRetrievalDept">
+              <PropertyRef Name="ItemCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_StationeryRetrievalDetail_ItemCode">
+          <End Role="Stock" Type="SA38ADTeam6Model.Stock" Multiplicity="1" />
+          <End Role="StationeryRetrievalDetail" Type="SA38ADTeam6Model.StationeryRetrievalDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Stock">
+              <PropertyRef Name="ItemCode" />
+            </Principal>
+            <Dependent Role="StationeryRetrievalDetail">
+              <PropertyRef Name="ItemCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Stock_Supplier1">
+          <End Role="Supplier" Type="SA38ADTeam6Model.Supplier" Multiplicity="0..1" />
+          <End Role="Stock" Type="SA38ADTeam6Model.Stock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Supplier">
+              <PropertyRef Name="SupplierID" />
+            </Principal>
+            <Dependent Role="Stock">
+              <PropertyRef Name="Supplier1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Stock_Supplier2">
+          <End Role="Supplier" Type="SA38ADTeam6Model.Supplier" Multiplicity="0..1" />
+          <End Role="Stock" Type="SA38ADTeam6Model.Stock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Supplier">
+              <PropertyRef Name="SupplierID" />
+            </Principal>
+            <Dependent Role="Stock">
+              <PropertyRef Name="Supplier2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Stock_Supplier3">
+          <End Role="Supplier" Type="SA38ADTeam6Model.Supplier" Multiplicity="0..1" />
+          <End Role="Stock" Type="SA38ADTeam6Model.Stock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Supplier">
+              <PropertyRef Name="SupplierID" />
+            </Principal>
+            <Dependent Role="Stock">
+              <PropertyRef Name="Supplier3" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SA38ADTeam6ModelStoreContainer" CdmEntityContainer="SA38ADTeam6Entities">
+          <EntitySetMapping Name="CollectionPoints">
+            <EntityTypeMapping TypeName="SA38ADTeam6Model.CollectionPoint">
+              <MappingFragment StoreEntitySet="CollectionPoint">
+                <ScalarProperty Name="CollectionPointCode" ColumnName="CollectionPointCode" />
+                <ScalarProperty Name="CollectionPointName" ColumnName="CollectionPointName" />
+                <ScalarProperty Name="CollectionTime" ColumnName="CollectionTime" />
+                <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+                <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Delegations">
+            <EntityTypeMapping TypeName="SA38ADTeam6Model.Delegation">
+              <MappingFragment StoreEntitySet="Delegation">
+                <ScalarProperty Name="DelegationID" ColumnName="DelegationID" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="DelegatedFlag" ColumnName="DelegatedFlag" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Departments">
+            <EntityTypeMapping TypeName="SA38ADTeam6Model.Department">
+              <MappingFragment StoreEntitySet="Department">
+                <ScalarProperty Name="DeptCode" ColumnName="DeptCode" />
+                <ScalarProperty Name="DeptName" ColumnName="DeptName" />
+                <ScalarProperty Name="CollectionPoint" ColumnName="CollectionPoint" />
+                <ScalarProperty Name="DeptContactNo" ColumnName="DeptContactNo" />
+                <ScalarProperty Name="DeptCollectionPin" ColumnName="DeptCollectionPin" />
+                <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+                <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+                <ScalarProperty Name="DeptRep" ColumnName="DeptRep" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Discrepancies">
+            <EntityTypeMapping TypeName="SA38ADTeam6Model.Discrepancy">
+              <MappingFragment StoreEntitySet="Discrepancy">
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="DiscrepancyID" ColumnName="DiscrepancyID" />
+                <ScalarProperty Name="DateRaised" ColumnName="DateRaised" />
+                <ScalarProperty Name="RaisedBy" ColumnName="RaisedBy" />
+                <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+                <ScalarProperty Name="DiscrepancyStatus" ColumnName="DiscrepancyStatus" />
+                <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+                <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+                <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DiscrepancyDetails">
+            <EntityTypeMapping TypeName="SA38ADTeam6Model.DiscrepancyDetail">
+              <MappingFragment StoreEntitySet="DiscrepancyDetail">
+                <ScalarProperty Name="DiscrepancyID" ColumnName="DiscrepancyID" />
+                <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="IsAdded" ColumnName="IsAdded" />
+                <ScalarProperty Name="Reason" ColumnName="Reason" />
+                <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="SA38ADTeam6Model.Employee">
+              <MappingFragment StoreEntitySet="Employee">
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+                <ScalarProperty Name="DeptCode" ColumnName="DeptCode" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="RoleCode" ColumnName="RoleCode" />
+                <ScalarProperty Name="EmpContactNo" ColumnName="EmpContactNo" />
+                <ScalarProperty Name="EmpEmail" ColumnName="EmpEmail" />
+                <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+                <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PurchaseOrders">
+            <EntityTypeMapping TypeName="SA38ADTeam6Model.PurchaseOrder">
+              <MappingFragment StoreEntitySet="PurchaseOrder">
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="DeliveryNo" ColumnName="DeliveryNo" />
+                <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+                <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+                <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+                <ScalarProperty Name="DateRaised" ColumnName="DateRaised" />
+                <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+                <ScalarProperty Name="POStatus" ColumnName="POStatus" />
+                <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+                <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PurchaseOrderDetails">
+            <EntityTypeMapping TypeName="SA38ADTeam6Model.PurchaseOrderDetail">
+              <MappingFragment StoreEntitySet="PurchaseOrderDetail">
+                <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+                <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Requests">
+            <EntityTypeMapping TypeName="SA38ADTeam6Model.Request">
+              <MappingFragment StoreEntitySet="Request">
+                <ScalarProperty Name="RequestID" ColumnName="RequestID" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="RequestStatus" ColumnName="RequestStatus" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+                <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+                <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RequestDetails">
+            <EntityTypeMapping TypeName="SA38ADTeam6Model.RequestDetail">
+              <MappingFragment StoreEntitySet="RequestDetail">
+                <ScalarProperty Name="RequestID" ColumnName="RequestID" />
+                <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StationeryDisbursements">
+            <EntityTypeMapping TypeName="SA38ADTeam6Model.StationeryDisbursement">
+              <MappingFragment StoreEntitySet="StationeryDisbursement">
+                <ScalarProperty Name="DisbursementID" ColumnName="DisbursementID" />
+                <ScalarProperty Name="RetrievalID" ColumnName="RetrievalID" />
+                <ScalarProperty Name="DeptCode" ColumnName="DeptCode" />
+                <ScalarProperty Name="DeptRep" ColumnName="DeptRep" />
+                <ScalarProperty Name="CollectionPoint" ColumnName="CollectionPoint" />
+                <ScalarProperty Name="DisbursementStatus" ColumnName="DisbursementStatus" />
+                <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+                <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StationeryDisbursementDetails">
+            <EntityTypeMapping TypeName="SA38ADTeam6Model.StationeryDisbursementDetail">
+              <MappingFragment StoreEntitySet="StationeryDisbursementDetail">
+                <ScalarProperty Name="DisbursementID" ColumnName="DisbursementID" />
+                <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+                <ScalarProperty Name="RequestedQty" ColumnName="RequestedQty" />
+                <ScalarProperty Name="ActualQty" ColumnName="ActualQty" />
+                <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StationeryRetrievals">
+            <EntityTypeMapping TypeName="SA38ADTeam6Model.StationeryRetrieval">
+              <MappingFragment StoreEntitySet="StationeryRetrieval">
+                <ScalarProperty Name="RetrievalStatus" ColumnName="RetrievalStatus" />
+                <ScalarProperty Name="RetrievalID" ColumnName="RetrievalID" />
+                <ScalarProperty Name="DateRetrieved" ColumnName="DateRetrieved" />
+                <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StationeryRetrievalDepts">
+            <EntityTypeMapping TypeName="SA38ADTeam6Model.StationeryRetrievalDept">
+              <MappingFragment StoreEntitySet="StationeryRetrievalDept">
+                <ScalarProperty Name="RetrievalByDeptID" ColumnName="RetrievalByDeptID" />
+                <ScalarProperty Name="RetrievalID" ColumnName="RetrievalID" />
+                <ScalarProperty Name="DeptCode" ColumnName="DeptCode" />
+                <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+                <ScalarProperty Name="RequestedQty" ColumnName="RequestedQty" />
+                <ScalarProperty Name="ActualQty" ColumnName="ActualQty" />
+                <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StationeryRetrievalDetails">
+            <EntityTypeMapping TypeName="SA38ADTeam6Model.StationeryRetrievalDetail">
+              <MappingFragment StoreEntitySet="StationeryRetrievalDetail">
+                <ScalarProperty Name="RetrievalID" ColumnName="RetrievalID" />
+                <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+                <ScalarProperty Name="RequestedQty" ColumnName="RequestedQty" />
+                <ScalarProperty Name="AvailableQty" ColumnName="AvailableQty" />
+                <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Stocks">
+            <EntityTypeMapping TypeName="SA38ADTeam6Model.Stock">
+              <MappingFragment StoreEntitySet="Stock">
+                <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+                <ScalarProperty Name="ItemCategory" ColumnName="ItemCategory" />
+                <ScalarProperty Name="ItemDescription" ColumnName="ItemDescription" />
+                <ScalarProperty Name="UnitOfMeasure" ColumnName="UnitOfMeasure" />
+                <ScalarProperty Name="Supplier1" ColumnName="Supplier1" />
+                <ScalarProperty Name="Price1" ColumnName="Price1" />
+                <ScalarProperty Name="Supplier2" ColumnName="Supplier2" />
+                <ScalarProperty Name="Price2" ColumnName="Price2" />
+                <ScalarProperty Name="Supplier3" ColumnName="Supplier3" />
+                <ScalarProperty Name="Price3" ColumnName="Price3" />
+                <ScalarProperty Name="ReorderLevel" ColumnName="ReorderLevel" />
+                <ScalarProperty Name="MinReorderQty" ColumnName="MinReorderQty" />
+                <ScalarProperty Name="AvailableQty" ColumnName="AvailableQty" />
+                <ScalarProperty Name="BinNumber" ColumnName="BinNumber" />
+                <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+                <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Suppliers">
+            <EntityTypeMapping TypeName="SA38ADTeam6Model.Supplier">
+              <MappingFragment StoreEntitySet="Supplier">
+                <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+                <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+                <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+                <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+                <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserRoles">
+            <EntityTypeMapping TypeName="SA38ADTeam6Model.UserRole">
+              <MappingFragment StoreEntitySet="UserRole">
+                <ScalarProperty Name="RoleCode" ColumnName="RoleCode" />
+                <ScalarProperty Name="RoleDescription" ColumnName="RoleDescription" />
+                <ScalarProperty Name="Dateupdated" ColumnName="Dateupdated" />
+                <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="SA38ADTeam6">
+        <EntityTypeShape EntityType="SA38ADTeam6Model.CollectionPoint" Width="1.5" PointX="3.75" PointY="3.625" Height="2.3648893229166656" IsExpanded="true" />
+        <EntityTypeShape EntityType="SA38ADTeam6Model.Delegation" Width="1.5" PointX="6" PointY="32" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="SA38ADTeam6Model.Department" Width="1.5" PointX="6" PointY="0.75" Height="3.5186979166666656" IsExpanded="true" />
+        <EntityTypeShape EntityType="SA38ADTeam6Model.Discrepancy" Width="1.5" PointX="6" PointY="27.25" Height="3.1340950520833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="SA38ADTeam6Model.DiscrepancyDetail" Width="1.5" PointX="8.25" PointY="12.5" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="SA38ADTeam6Model.Employee" Width="1.5" PointX="3.75" PointY="27.75" Height="4.672506510416671" IsExpanded="true" />
+        <EntityTypeShape EntityType="SA38ADTeam6Model.PurchaseOrder" Width="1.5" PointX="3" PointY="7.5" Height="2.7494921875000005" IsExpanded="true" />
+        <EntityTypeShape EntityType="SA38ADTeam6Model.PurchaseOrderDetail" Width="1.5" PointX="5.25" PointY="11" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="SA38ADTeam6Model.Request" Width="1.5" PointX="3" PointY="18.25" Height="3.1340950520833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="SA38ADTeam6Model.RequestDetail" Width="1.5" PointX="5.25" PointY="14.75" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="SA38ADTeam6Model.StationeryDisbursement" Width="1.5" PointX="8.25" PointY="16.875" Height="3.3263964843750031" IsExpanded="true" />
+        <EntityTypeShape EntityType="SA38ADTeam6Model.StationeryDisbursementDetail" Width="1.5" PointX="5.25" PointY="17.75" Height="2.1725878906250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="SA38ADTeam6Model.StationeryRetrieval" Width="1.5" PointX="6" PointY="8.125" Height="1.9802864583333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="SA38ADTeam6Model.StationeryRetrievalDept" Width="1.5" PointX="8.25" PointY="8.375" Height="2.9417936197916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="SA38ADTeam6Model.StationeryRetrievalDetail" Width="1.5" PointX="5.25" PointY="24.375" Height="2.1725878906250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="SA38ADTeam6Model.Stock" Width="1.5" PointX="3" PointY="11" Height="5.8263151041666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="SA38ADTeam6Model.Supplier" Width="1.5" PointX="0.75" PointY="10.5" Height="3.3263964843750031" IsExpanded="true" />
+        <EntityTypeShape EntityType="SA38ADTeam6Model.UserRole" Width="1.5" PointX="1.5" PointY="29.125" Height="1.9802864583333388" IsExpanded="true" />
+        <AssociationConnector Association="SA38ADTeam6Model.fk_Department_CollectionPt" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.25" PointY="3.9468489583333328" />
+          <ConnectorPoint PointX="5.416666666666667" PointY="3.9468489583333324" />
+          <ConnectorPoint PointX="5.583333333333333" PointY="3.9468489583333328" />
+          <ConnectorPoint PointX="6" PointY="3.9468489583333328" />
+        </AssociationConnector>
+        <AssociationConnector Association="SA38ADTeam6Model.fk_StationeryDisbursement_CollectionPt" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.875" PointY="5.9898893229166656" />
+          <ConnectorPoint PointX="4.875" PointY="17.336293945312498" />
+          <ConnectorPoint PointX="4.916666666666667" PointY="17.336293945312498" />
+          <ConnectorPoint PointX="5.1186977898637815" PointY="17.336293945312498" />
+          <ConnectorPoint PointX="7.072916666666667" PointY="17.336293945312498" />
+          <ConnectorPoint PointX="7.239583333333333" PointY="17.336293945312498" />
+          <ConnectorPoint PointX="7.791666666666667" PointY="17.336293945312498" />
+          <ConnectorPoint PointX="7.958333333333333" PointY="17.336293945312498" />
+          <ConnectorPoint PointX="8.25" PointY="17.336293945312498" />
+        </AssociationConnector>
+        <AssociationConnector Association="SA38ADTeam6Model.fk_Delegation_EmployeeID" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.25" PointY="32.211253255208334" />
+          <ConnectorPoint PointX="6" PointY="32.211253255208334" />
+        </AssociationConnector>
+        <AssociationConnector Association="SA38ADTeam6Model.fk_Department_DeptRep" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="27.75" />
+          <ConnectorPoint PointX="4.5" PointY="21.634095052083332" />
+          <ConnectorPoint PointX="4.75" PointY="21.634095052083332" />
+          <ConnectorPoint PointX="4.75" PointY="6.2398893229166656" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="6.2398893229166648" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="6.2398893229166656" />
+          <ConnectorPoint PointX="5.5" PointY="6.2398893229166656" />
+          <ConnectorPoint PointX="5.5" PointY="2.3171724791666657" />
+          <ConnectorPoint PointX="6" PointY="2.3171724791666657" />
+        </AssociationConnector>
+        <AssociationConnector Association="SA38ADTeam6Model.fk_Employee_DeptCode" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="4.2686979166666656" />
+          <ConnectorPoint PointX="6.75" PointY="7.875" />
+          <ConnectorPoint PointX="5.677083333333333" PointY="7.8749999999999991" />
+          <ConnectorPoint PointX="5.510416666666667" PointY="7.875" />
+          <ConnectorPoint PointX="5" PointY="7.875" />
+          <ConnectorPoint PointX="5" PointY="27.5" />
+          <ConnectorPoint PointX="5.010416666666667" PointY="27.5" />
+          <ConnectorPoint PointX="5.177083333333333" PointY="27.5" />
+          <ConnectorPoint PointX="5.5" PointY="27.5" />
+          <ConnectorPoint PointX="5.5" PointY="29.949374627604165" />
+          <ConnectorPoint PointX="5.25" PointY="29.949374627604165" />
+        </AssociationConnector>
+        <AssociationConnector Association="SA38ADTeam6Model.fk_StationeryDisbursement_DeptCode" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="4.2686979166666656" />
+          <ConnectorPoint PointX="7.875" PointY="4.6436979166666656" />
+          <ConnectorPoint PointX="7.875" PointY="18.800097214843753" />
+          <ConnectorPoint PointX="8.25" PointY="18.800097214843753" />
+        </AssociationConnector>
+        <AssociationConnector Association="SA38ADTeam6Model.fk_StationeryRetrievalDept_DeptCode" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="2.478096458333332" />
+          <ConnectorPoint PointX="9" PointY="2.478096458333332" />
+          <ConnectorPoint PointX="9" PointY="8.375" />
+        </AssociationConnector>
+        <AssociationConnector Association="SA38ADTeam6Model.fk_Discrepancy_ApprovedBy" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.25" PointY="28.787187313802082" />
+          <ConnectorPoint PointX="5.416666666666667" PointY="28.787187313802082" />
+          <ConnectorPoint PointX="5.583333333333333" PointY="28.787187313802082" />
+          <ConnectorPoint PointX="6" PointY="28.787187313802082" />
+        </AssociationConnector>
+        <AssociationConnector Association="SA38ADTeam6Model.fk_Discrepancy_RaisedBy" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.25" PointY="29.368280970703125" />
+          <ConnectorPoint PointX="5.416666666666667" PointY="29.368280970703125" />
+          <ConnectorPoint PointX="5.583333333333333" PointY="29.368280970703125" />
+          <ConnectorPoint PointX="6" PointY="29.368280970703125" />
+        </AssociationConnector>
+        <AssociationConnector Association="SA38ADTeam6Model.fk_DiscrepancyDetail_DiscrepancyID" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.15625" PointY="27.25" />
+          <ConnectorPoint PointX="7.15625" PointY="14.057444661458334" />
+          <ConnectorPoint PointX="7.244791666666667" PointY="14.057444661458334" />
+          <ConnectorPoint PointX="7.411458333333333" PointY="14.057444661458334" />
+          <ConnectorPoint PointX="7.791666666666667" PointY="14.057444661458334" />
+          <ConnectorPoint PointX="7.958333333333333" PointY="14.057444661458334" />
+          <ConnectorPoint PointX="8.25" PointY="14.057444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="SA38ADTeam6Model.fk_DiscrepancyDetail_ItemCode" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="13.6799169921875" />
+          <ConnectorPoint PointX="4.666666666666667" PointY="13.679916992187499" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="13.6799169921875" />
+          <ConnectorPoint PointX="7.244791666666667" PointY="13.6799169921875" />
+          <ConnectorPoint PointX="7.411458333333333" PointY="13.6799169921875" />
+          <ConnectorPoint PointX="7.791666666666667" PointY="13.6799169921875" />
+          <ConnectorPoint PointX="7.958333333333333" PointY="13.6799169921875" />
+          <ConnectorPoint PointX="8.25" PointY="13.6799169921875" />
+        </AssociationConnector>
+        <AssociationConnector Association="SA38ADTeam6Model.fk_Employee_RoleCode" ManuallyRouted="false">
+          <ConnectorPoint PointX="3" PointY="30.115143229166669" />
+          <ConnectorPoint PointX="3.75" PointY="30.115143229166669" />
+        </AssociationConnector>
+        <AssociationConnector Association="SA38ADTeam6Model.fk_Request_ApprovedBy" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.0625" PointY="27.75" />
+          <ConnectorPoint PointX="4.0625" PointY="21.384095052083332" />
+        </AssociationConnector>
+        <AssociationConnector Association="SA38ADTeam6Model.fk_Request_EmployeeID" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.28125" PointY="27.75" />
+          <ConnectorPoint PointX="4.28125" PointY="21.384095052083332" />
+        </AssociationConnector>
+        <AssociationConnector Association="SA38ADTeam6Model.fk_StationeryDisbursement_DeptRep" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.09375" PointY="27.75" />
+          <ConnectorPoint PointX="5.09375" PointY="17.54314947265625" />
+          <ConnectorPoint PointX="7.072916666666667" PointY="17.54314947265625" />
+          <ConnectorPoint PointX="7.239583333333333" PointY="17.54314947265625" />
+          <ConnectorPoint PointX="7.791666666666667" PointY="17.54314947265625" />
+          <ConnectorPoint PointX="7.958333333333333" PointY="17.54314947265625" />
+          <ConnectorPoint PointX="8.25" PointY="17.54314947265625" />
+        </AssociationConnector>
+        <AssociationConnector Association="SA38ADTeam6Model.fk_PurchaseOrder_Supplier" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="10.5" />
+          <ConnectorPoint PointX="1.5" PointY="8.87474609375" />
+          <ConnectorPoint PointX="3" PointY="8.87474609375" />
+        </AssociationConnector>
+        <AssociationConnector Association="SA38ADTeam6Model.fk_PurchaseOrderDetail_PONumber" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="7.6875" />
+          <ConnectorPoint PointX="4.666666666666667" PointY="7.6874999999999991" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="7.6875" />
+          <ConnectorPoint PointX="5.59375" PointY="7.6875" />
+          <ConnectorPoint PointX="5.59375" PointY="11" />
+        </AssociationConnector>
+        <AssociationConnector Association="SA38ADTeam6Model.fk_PurchaseOrderDetail_ItemCode" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="12.182444661458334" />
+          <ConnectorPoint PointX="4.666666666666667" PointY="12.182444661458332" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="12.182444661458334" />
+          <ConnectorPoint PointX="5.25" PointY="12.182444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="SA38ADTeam6Model.fk_RequestDetail_RequestID" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="18.313460538461534" />
+          <ConnectorPoint PointX="4.6910744349011209" PointY="18.122386103560412" />
+          <ConnectorPoint PointX="4.8089255650988791" PointY="18.004534973362656" />
+          <ConnectorPoint PointX="4.9375" PointY="17.875960538461534" />
+          <ConnectorPoint PointX="4.9375" PointY="15.836293945312498" />
+          <ConnectorPoint PointX="5.25" PointY="15.836293945312498" />
+        </AssociationConnector>
+        <AssociationConnector Association="SA38ADTeam6Model.fk_RequestDetail_ItemCode" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="15.230646972656249" />
+          <ConnectorPoint PointX="4.666666666666667" PointY="15.230646972656247" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="15.230646972656249" />
+          <ConnectorPoint PointX="5.25" PointY="15.230646972656249" />
+        </AssociationConnector>
+        <AssociationConnector Association="SA38ADTeam6Model.fk_StationeryDisbursement_RetrievalID" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.328125" PointY="10.105286458333339" />
+          <ConnectorPoint PointX="7.328125" PointY="17.12943841796875" />
+          <ConnectorPoint PointX="7.791666666666667" PointY="17.12943841796875" />
+          <ConnectorPoint PointX="7.958333333333333" PointY="17.12943841796875" />
+          <ConnectorPoint PointX="8.25" PointY="17.12943841796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="SA38ADTeam6Model.fk_StationeryDisbursementDetail_ItemCode" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="16.80092948878205" />
+          <ConnectorPoint PointX="4.6910744349011217" PointY="16.992003923683171" />
+          <ConnectorPoint PointX="4.8089255650988791" PointY="17.109855053880928" />
+          <ConnectorPoint PointX="4.8160744349011217" PointY="17.117003923683171" />
+          <ConnectorPoint PointX="5.0589255650988791" PointY="17.359855053880928" />
+          <ConnectorPoint PointX="5.1875" PointY="17.48842948878205" />
+          <ConnectorPoint PointX="5.1875" PointY="18.8362939453125" />
+          <ConnectorPoint PointX="5.25" PointY="18.8362939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="SA38ADTeam6Model.fk_StationeryRetrievalDept_RetrievalID" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="9.24014322916667" />
+          <ConnectorPoint PointX="7.791666666666667" PointY="9.24014322916667" />
+          <ConnectorPoint PointX="7.958333333333333" PointY="9.24014322916667" />
+          <ConnectorPoint PointX="8.25" PointY="9.24014322916667" />
+        </AssociationConnector>
+        <AssociationConnector Association="SA38ADTeam6Model.fk_StationeryRetrievalDept_ItemCode" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.75" PointY="11" />
+          <ConnectorPoint PointX="3.75" PointY="10.4994921875" />
+          <ConnectorPoint PointX="4.666666666666667" PointY="10.499492187499998" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="10.4994921875" />
+          <ConnectorPoint PointX="5.510416666666667" PointY="10.4994921875" />
+          <ConnectorPoint PointX="5.677083333333333" PointY="10.4994921875" />
+          <ConnectorPoint PointX="7.244791666666667" PointY="10.4994921875" />
+          <ConnectorPoint PointX="7.411458333333333" PointY="10.4994921875" />
+          <ConnectorPoint PointX="7.791666666666667" PointY="10.4994921875" />
+          <ConnectorPoint PointX="7.958333333333333" PointY="10.4994921875" />
+          <ConnectorPoint PointX="8" PointY="10.4994921875" />
+          <ConnectorPoint PointX="8" PointY="10.309720424479163" />
+          <ConnectorPoint PointX="8.25" PointY="10.309720424479163" />
+        </AssociationConnector>
+        <AssociationConnector Association="SA38ADTeam6Model.fk_StationeryRetrievalDetail_ItemCode" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="16.81939102724359" />
+          <ConnectorPoint PointX="4.6910744349011217" PointY="17.010465462144712" />
+          <ConnectorPoint PointX="4.8089255650988791" PointY="17.128316592342468" />
+          <ConnectorPoint PointX="4.8160744349011217" PointY="17.135465462144712" />
+          <ConnectorPoint PointX="5.0589255650988791" PointY="17.378316592342468" />
+          <ConnectorPoint PointX="5.15625" PointY="17.47564102724359" />
+          <ConnectorPoint PointX="5.15625" PointY="25.4612939453125" />
+          <ConnectorPoint PointX="5.25" PointY="25.4612939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="SA38ADTeam6Model.fk_Stock_Supplier1" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="12.413198242187502" />
+          <ConnectorPoint PointX="3" PointY="12.413198242187502" />
+        </AssociationConnector>
+        <AssociationConnector Association="SA38ADTeam6Model.fk_Stock_Supplier2" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="11.644099121093751" />
+          <ConnectorPoint PointX="3" PointY="11.644099121093751" />
+        </AssociationConnector>
+        <AssociationConnector Association="SA38ADTeam6Model.fk_Stock_Supplier3" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="13.182297363281252" />
+          <ConnectorPoint PointX="3" PointY="13.182297363281252" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

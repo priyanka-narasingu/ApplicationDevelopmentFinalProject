@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SA38ADTeam6ModelStoreContainer" CdmEntityContainer="SA38ADTeam6Entities">
+    <EntitySetMapping Name="CollectionPoints">
+      <EntityTypeMapping TypeName="SA38ADTeam6Model.CollectionPoint">
+        <MappingFragment StoreEntitySet="CollectionPoint">
+          <ScalarProperty Name="CollectionPointCode" ColumnName="CollectionPointCode" />
+          <ScalarProperty Name="CollectionPointName" ColumnName="CollectionPointName" />
+          <ScalarProperty Name="CollectionTime" ColumnName="CollectionTime" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Delegations">
+      <EntityTypeMapping TypeName="SA38ADTeam6Model.Delegation">
+        <MappingFragment StoreEntitySet="Delegation">
+          <ScalarProperty Name="DelegationID" ColumnName="DelegationID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="DelegatedFlag" ColumnName="DelegatedFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="SA38ADTeam6Model.Department">
+        <MappingFragment StoreEntitySet="Department">
+          <ScalarProperty Name="DeptCode" ColumnName="DeptCode" />
+          <ScalarProperty Name="DeptName" ColumnName="DeptName" />
+          <ScalarProperty Name="CollectionPoint" ColumnName="CollectionPoint" />
+          <ScalarProperty Name="DeptContactNo" ColumnName="DeptContactNo" />
+          <ScalarProperty Name="DeptCollectionPin" ColumnName="DeptCollectionPin" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+          <ScalarProperty Name="DeptRep" ColumnName="DeptRep" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Discrepancies">
+      <EntityTypeMapping TypeName="SA38ADTeam6Model.Discrepancy">
+        <MappingFragment StoreEntitySet="Discrepancy">
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="DiscrepancyID" ColumnName="DiscrepancyID" />
+          <ScalarProperty Name="DateRaised" ColumnName="DateRaised" />
+          <ScalarProperty Name="RaisedBy" ColumnName="RaisedBy" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="DiscrepancyStatus" ColumnName="DiscrepancyStatus" />
+          <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DiscrepancyDetails">
+      <EntityTypeMapping TypeName="SA38ADTeam6Model.DiscrepancyDetail">
+        <MappingFragment StoreEntitySet="DiscrepancyDetail">
+          <ScalarProperty Name="DiscrepancyID" ColumnName="DiscrepancyID" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="IsAdded" ColumnName="IsAdded" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="SA38ADTeam6Model.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="DeptCode" ColumnName="DeptCode" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="RoleCode" ColumnName="RoleCode" />
+          <ScalarProperty Name="EmpContactNo" ColumnName="EmpContactNo" />
+          <ScalarProperty Name="EmpEmail" ColumnName="EmpEmail" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PurchaseOrders">
+      <EntityTypeMapping TypeName="SA38ADTeam6Model.PurchaseOrder">
+        <MappingFragment StoreEntitySet="PurchaseOrder">
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="DeliveryNo" ColumnName="DeliveryNo" />
+          <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+          <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+          <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+          <ScalarProperty Name="DateRaised" ColumnName="DateRaised" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="POStatus" ColumnName="POStatus" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PurchaseOrderDetails">
+      <EntityTypeMapping TypeName="SA38ADTeam6Model.PurchaseOrderDetail">
+        <MappingFragment StoreEntitySet="PurchaseOrderDetail">
+          <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Requests">
+      <EntityTypeMapping TypeName="SA38ADTeam6Model.Request">
+        <MappingFragment StoreEntitySet="Request">
+          <ScalarProperty Name="RequestID" ColumnName="RequestID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="RequestStatus" ColumnName="RequestStatus" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequestDetails">
+      <EntityTypeMapping TypeName="SA38ADTeam6Model.RequestDetail">
+        <MappingFragment StoreEntitySet="RequestDetail">
+          <ScalarProperty Name="RequestID" ColumnName="RequestID" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StationeryDisbursements">
+      <EntityTypeMapping TypeName="SA38ADTeam6Model.StationeryDisbursement">
+        <MappingFragment StoreEntitySet="StationeryDisbursement">
+          <ScalarProperty Name="DisbursementID" ColumnName="DisbursementID" />
+          <ScalarProperty Name="RetrievalID" ColumnName="RetrievalID" />
+          <ScalarProperty Name="DeptCode" ColumnName="DeptCode" />
+          <ScalarProperty Name="DeptRep" ColumnName="DeptRep" />
+          <ScalarProperty Name="CollectionPoint" ColumnName="CollectionPoint" />
+          <ScalarProperty Name="DisbursementStatus" ColumnName="DisbursementStatus" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StationeryDisbursementDetails">
+      <EntityTypeMapping TypeName="SA38ADTeam6Model.StationeryDisbursementDetail">
+        <MappingFragment StoreEntitySet="StationeryDisbursementDetail">
+          <ScalarProperty Name="DisbursementID" ColumnName="DisbursementID" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="RequestedQty" ColumnName="RequestedQty" />
+          <ScalarProperty Name="ActualQty" ColumnName="ActualQty" />
+          <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StationeryRetrievals">
+      <EntityTypeMapping TypeName="SA38ADTeam6Model.StationeryRetrieval">
+        <MappingFragment StoreEntitySet="StationeryRetrieval">
+          <ScalarProperty Name="RetrievalStatus" ColumnName="RetrievalStatus" />
+          <ScalarProperty Name="RetrievalID" ColumnName="RetrievalID" />
+          <ScalarProperty Name="DateRetrieved" ColumnName="DateRetrieved" />
+          <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StationeryRetrievalDepts">
+      <EntityTypeMapping TypeName="SA38ADTeam6Model.StationeryRetrievalDept">
+        <MappingFragment StoreEntitySet="StationeryRetrievalDept">
+          <ScalarProperty Name="RetrievalByDeptID" ColumnName="RetrievalByDeptID" />
+          <ScalarProperty Name="RetrievalID" ColumnName="RetrievalID" />
+          <ScalarProperty Name="DeptCode" ColumnName="DeptCode" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="RequestedQty" ColumnName="RequestedQty" />
+          <ScalarProperty Name="ActualQty" ColumnName="ActualQty" />
+          <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StationeryRetrievalDetails">
+      <EntityTypeMapping TypeName="SA38ADTeam6Model.StationeryRetrievalDetail">
+        <MappingFragment StoreEntitySet="StationeryRetrievalDetail">
+          <ScalarProperty Name="RetrievalID" ColumnName="RetrievalID" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="RequestedQty" ColumnName="RequestedQty" />
+          <ScalarProperty Name="AvailableQty" ColumnName="AvailableQty" />
+          <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stocks">
+      <EntityTypeMapping TypeName="SA38ADTeam6Model.Stock">
+        <MappingFragment StoreEntitySet="Stock">
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="ItemCategory" ColumnName="ItemCategory" />
+          <ScalarProperty Name="ItemDescription" ColumnName="ItemDescription" />
+          <ScalarProperty Name="UnitOfMeasure" ColumnName="UnitOfMeasure" />
+          <ScalarProperty Name="Supplier1" ColumnName="Supplier1" />
+          <ScalarProperty Name="Price1" ColumnName="Price1" />
+          <ScalarProperty Name="Supplier2" ColumnName="Supplier2" />
+          <ScalarProperty Name="Price2" ColumnName="Price2" />
+          <ScalarProperty Name="Supplier3" ColumnName="Supplier3" />
+          <ScalarProperty Name="Price3" ColumnName="Price3" />
+          <ScalarProperty Name="ReorderLevel" ColumnName="ReorderLevel" />
+          <ScalarProperty Name="MinReorderQty" ColumnName="MinReorderQty" />
+          <ScalarProperty Name="AvailableQty" ColumnName="AvailableQty" />
+          <ScalarProperty Name="BinNumber" ColumnName="BinNumber" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suppliers">
+      <EntityTypeMapping TypeName="SA38ADTeam6Model.Supplier">
+        <MappingFragment StoreEntitySet="Supplier">
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRoles">
+      <EntityTypeMapping TypeName="SA38ADTeam6Model.UserRole">
+        <MappingFragment StoreEntitySet="UserRole">
+          <ScalarProperty Name="RoleCode" ColumnName="RoleCode" />
+          <ScalarProperty Name="RoleDescription" ColumnName="RoleDescription" />
+          <ScalarProperty Name="Dateupdated" ColumnName="Dateupdated" />
+          <ScalarProperty Name="DeletedFlag" ColumnName="DeletedFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

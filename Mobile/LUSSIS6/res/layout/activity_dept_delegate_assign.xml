@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/AbsoluteLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E9F8F9" >
+
+	<TextView
+		android:id="@+id/textViewUserName"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_x="24dp"
+		android:layout_y="16dp"
+		android:text="Employee Name:" />
+
+	<TextView
+		android:id="@+id/textView2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_x="158dp"
+		android:layout_y="18dp"
+		android:text="TextView" />
+
+	<Button
+		android:id="@+id/buttonLogin"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_x="121dp"
+		android:layout_y="388dp"
+		android:text="Button" />
+
+	<DatePicker
+		android:id="@+id/datePicker1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_x="3dp"
+		android:layout_y="-23dp" />
+
+	<DatePicker
+		android:id="@+id/datePicker2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_x="4dp"
+		android:layout_y="195dp" />
+
+</AbsoluteLayout>

@@ -1,0 +1,143 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E9F8F9"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.project.lussis6.Clerk_IssueEdit" >
+
+    <TextView
+        android:id="@+id/textViewItemCodeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textViewItemDescriptionLabel"
+        android:layout_below="@+id/textViewItemDescriptionLabel"
+        android:layout_marginTop="26dp"
+        android:text="@string/issue_ItemCode"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textViewUnitOfMeasureLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textViewItemCodeLabel"
+        android:layout_below="@+id/textViewItemCodeLabel"
+        android:layout_marginTop="23dp"
+        android:text="@string/issue_UnitOfMeasure"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textViewIssueItemDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewItemDescriptionLabel"
+        android:layout_alignBottom="@+id/textViewItemDescriptionLabel"
+        android:layout_marginLeft="28dp"
+        android:layout_toRightOf="@+id/textViewItemDescriptionLabel"
+        android:text="@string/Empty"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textViewItemCode1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewItemCodeLabel"
+        android:layout_alignLeft="@+id/textViewIssueItemDesc"
+        android:text="@string/Empty"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textViewUnitOfMeasure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewUnitOfMeasureLabel"
+        android:layout_alignBottom="@+id/textViewUnitOfMeasureLabel"
+        android:layout_alignLeft="@+id/textViewItemCode1"
+        android:text="@string/Empty"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textViewItemQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewIssueQuantityLabel"
+        android:layout_alignBottom="@+id/textViewIssueQuantityLabel"
+        android:layout_alignLeft="@+id/textViewUnitOfMeasure"
+        android:text="@string/Empty"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textViewRequestedQty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewEmptyList"
+        android:layout_alignBottom="@+id/textViewEmptyList"
+        android:layout_alignLeft="@+id/textViewUnitOfMeasure"
+        android:text="@string/Empty"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textViewEmptyList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textViewUnitOfMeasureLabel"
+        android:layout_below="@+id/textViewUnitOfMeasureLabel"
+        android:layout_marginTop="22dp"
+        android:text="@string/issue_RequestQtyLabel"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textViewItemDescriptionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/issue_itemDescriptionLabel"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editTextActualQuantity"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewIssueActualQtyLabel"
+        android:layout_alignLeft="@+id/textViewItemQuantity"
+        android:ems="10"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/buttonUpdateQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextActualQuantity"
+        android:layout_alignRight="@+id/editTextActualQuantity"
+        android:layout_below="@+id/editTextActualQuantity"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/submit_btn_yellow"
+        android:text="@string/issue_UpdateQty" />
+
+    <TextView
+        android:id="@+id/textViewIssueQuantityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textViewEmptyList"
+        android:layout_below="@+id/textViewEmptyList"
+        android:layout_marginTop="27dp"
+        android:text="@string/issue_Quantity"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textViewIssueActualQtyLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewEmptyList"
+        android:layout_below="@+id/textViewIssueQuantityLabel"
+        android:layout_marginTop="30dp"
+        android:text="@string/issue_ActualQty"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>

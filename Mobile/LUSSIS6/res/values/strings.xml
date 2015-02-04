@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="app_name">LUSSIS6</string>
+	<string name="hello_world">Hello world!</string>
+	<string name="action_settings">Settings</string>
+	<string name="title_activity_department">Department</string>
+	<string name="title_activity_dep__approval__tab">Dep Approval Tab</string>
+	<string name="title_activity_dep__approval__detail">Request Details</string>
+	<string name="title_activity_dep__delegate__tab">Dept</string>
+	<string name="title_activity_dep__delegate__remove">Remove Dept Delegate</string>
+	<string name="title_activity_dep__delegate_grant__detail">Dept Delegate Authority</string>
+	<string name="title_activity_clerk">Clerk</string>
+	<string name="title_activity_clerk__inventory_tab">Inventory - Raise Discrepancy</string>
+	<string name="title_activity_clerk__scan_qr__tab">Discrepancy - Scan QR Code</string>
+	<string name="title_activity_login">Login</string>
+	<string name="title_activity_clerk__inventory_detail">Inventory-Discrepancy Details</string>
+	<string name="title_activity_clerk__discrepancy_list">Discrepancy List</string>
+	<string name="title_activity_clerk__issue_departments">Dept by Collection Pt</string>
+	<string name="title_activity_clerk__issue_items">Stationery to issue</string>
+	<string name="title_activity_clerk__issue_edit">Edit item quantity</string>
+	<string name="scan">Scan</string>
+	<string name="disList">View Discrepancy List</string>
+	<string name="Issue_Item_RepName">Rep Name</string>
+	<string name="Issue_Item_Rep_Name_Actual">(Name)</string>
+	<string name="Issue_Item_Cancel">Cancel Delivery</string>
+	<string name="Issue_Item_Collected">Collect</string>
+	<string name="issue_itemDescriptionLabel">Item Desc</string>
+	<string name="issue_ItemCode">Item Code</string>
+	<string name="issue_UnitOfMeasure">Unit</string>
+	<string name="issue_Quantity">Qty to issue</string>
+	<string name="issue_ActualQty">Amended Qty</string>
+	<string name="issue_UpdateQty">Amend Qty</string>
+	<string name="issue_CancelDelivery">Cancel Delivery</string>
+	<string name="host">http://10.10.1.142/wcfservices/Service.svc/</string>
+	<string name="issue_RequestQtyLabel">Request Qty</string>
+	
+	<string name="empty_list">There are no items to issue</string>
+	<string name="Empty">To fill data</string>
+	<string name="LoginUserName">User name</string>
+	<string name="title_activity_clerk_issue_tab">clerk_issue_tab</string>
+	<string name="loginUserName">User name</string>
+	<string name="LoginPassword">Password</string>
+	<string name="LoginEnterUsername">Enter user name</string>
+	<string name="LoginButton">Login</string>
+	<string name="logout">Logout</string>
+    <string name="code">Item Code :</string>
+    <string name="ides">Item Description :</string>
+    <string name="loc">Location :</string>
+    <string name="unit">Unit of Measure :</string>
+    <string name="qty">Quantity in hand :</string>
+    <string name="added">Item Added</string>
+    <string name="removed">Item Removed</string>
+    <string name="add">Add</string>
+    <string name="remove">Remove</string>
+    <string name="comm">Comments</string>
+    <string name="sumbit">Submit</string>
+    <string name="clerk_discrepancy_deleteItem">Delete</string>
+    <string name="RejectionReason">Reason for rejection</string>
+    
+
+</resources>

@@ -1,0 +1,21 @@
+C:\Users\gauri_000\Documents\Term3\ADProject SVN\Web\SA38LUSSIS6\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll.config
+C:\Users\gauri_000\Documents\Term3\ADProject SVN\Web\SA38LUSSIS6\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
+C:\Users\gauri_000\Documents\Term3\ADProject SVN\Web\SA38LUSSIS6\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
+C:\Users\gauri_000\Documents\Term3\ADProject SVN\Web\SA38LUSSIS6\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
+C:\Users\gauri_000\Documents\Term3\ADProject SVN\Web\SA38LUSSIS6\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb
+C:\ADProject\Web\SA38LUSSIS6\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll.config
+C:\ADProject\Web\SA38LUSSIS6\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
+C:\ADProject\Web\SA38LUSSIS6\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
+C:\ADProject\Web\SA38LUSSIS6\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
+C:\ADProject\Web\SA38LUSSIS6\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb
+C:\ADProject\Web\SA38LUSSIS6\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csprojResolveAssemblyReference.cache
+C:\Users\a0122213a\Documents\ADProject\Web\SA38LUSSIS6\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll.config
+C:\Users\a0122213a\Documents\ADProject\Web\SA38LUSSIS6\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
+C:\Users\a0122213a\Documents\ADProject\Web\SA38LUSSIS6\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
+C:\Users\a0122213a\Documents\ADProject\Web\SA38LUSSIS6\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
+C:\Users\a0122213a\Documents\ADProject\Web\SA38LUSSIS6\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb
+C:\Users\a0122213a\Documents\AD\Final Submission\AD Project SA 38 - Team6\05.Source Code\Web\SA38LUSSIS6\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll.config
+C:\Users\a0122213a\Documents\AD\Final Submission\AD Project SA 38 - Team6\05.Source Code\Web\SA38LUSSIS6\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
+C:\Users\a0122213a\Documents\AD\Final Submission\AD Project SA 38 - Team6\05.Source Code\Web\SA38LUSSIS6\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
+C:\Users\a0122213a\Documents\AD\Final Submission\AD Project SA 38 - Team6\05.Source Code\Web\SA38LUSSIS6\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
+C:\Users\a0122213a\Documents\AD\Final Submission\AD Project SA 38 - Team6\05.Source Code\Web\SA38LUSSIS6\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb

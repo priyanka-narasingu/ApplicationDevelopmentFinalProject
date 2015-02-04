@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresentationLayer", "PresentationLayer\PresentationLayer.csproj", "{B41A27BC-2F51-45BC-BD91-F726B36B71A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogicLayer", "BusinessLogicLayer\BusinessLogicLayer.csproj", "{19601EA9-EEEA-47C7-83E9-16572A8F92D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B41A27BC-2F51-45BC-BD91-F726B36B71A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B41A27BC-2F51-45BC-BD91-F726B36B71A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B41A27BC-2F51-45BC-BD91-F726B36B71A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B41A27BC-2F51-45BC-BD91-F726B36B71A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19601EA9-EEEA-47C7-83E9-16572A8F92D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19601EA9-EEEA-47C7-83E9-16572A8F92D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19601EA9-EEEA-47C7-83E9-16572A8F92D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19601EA9-EEEA-47C7-83E9-16572A8F92D0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

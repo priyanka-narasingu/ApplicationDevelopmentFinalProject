@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsGenerateStationeryRetrieval" targetNamespace="http://tempuri.org/dsGenerateStationeryRetrieval.xsd" xmlns:mstns="http://tempuri.org/dsGenerateStationeryRetrieval.xsd" xmlns="http://tempuri.org/dsGenerateStationeryRetrieval.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="SA38ADTeam6ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SA38ADTeam6ConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.SA38ADTeam6ConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="v_GenerateStationeryRetrievalTableAdapter" GeneratorDataComponentClassName="v_GenerateStationeryRetrievalTableAdapter" Name="v_GenerateStationeryRetrieval" UserDataComponentName="v_GenerateStationeryRetrievalTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SA38ADTeam6ConnectionString (Web.config)" DbObjectName="SA38ADTeam6.dbo.v_GenerateStationeryRetrieval" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT RetrievalID, ItemCode, ItemCategory, ItemDescription, BinNumber, RequestedQty, AvailableQty FROM dbo.v_GenerateStationeryRetrieval</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="RetrievalID" DataSetColumn="RetrievalID" />
+              <Mapping SourceColumn="ItemCode" DataSetColumn="ItemCode" />
+              <Mapping SourceColumn="ItemCategory" DataSetColumn="ItemCategory" />
+              <Mapping SourceColumn="ItemDescription" DataSetColumn="ItemDescription" />
+              <Mapping SourceColumn="BinNumber" DataSetColumn="BinNumber" />
+              <Mapping SourceColumn="RequestedQty" DataSetColumn="RequestedQty" />
+              <Mapping SourceColumn="AvailableQty" DataSetColumn="AvailableQty" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsGenerateStationeryRetrieval" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsGenerateStationeryRetrieval" msprop:Generator_UserDSName="dsGenerateStationeryRetrieval">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="v_GenerateStationeryRetrieval" msprop:Generator_TableClassName="v_GenerateStationeryRetrievalDataTable" msprop:Generator_TableVarName="tablev_GenerateStationeryRetrieval" msprop:Generator_TablePropName="v_GenerateStationeryRetrieval" msprop:Generator_RowDeletingName="v_GenerateStationeryRetrievalRowDeleting" msprop:Generator_RowChangingName="v_GenerateStationeryRetrievalRowChanging" msprop:Generator_RowEvHandlerName="v_GenerateStationeryRetrievalRowChangeEventHandler" msprop:Generator_RowDeletedName="v_GenerateStationeryRetrievalRowDeleted" msprop:Generator_UserTableName="v_GenerateStationeryRetrieval" msprop:Generator_RowChangedName="v_GenerateStationeryRetrievalRowChanged" msprop:Generator_RowEvArgName="v_GenerateStationeryRetrievalRowChangeEvent" msprop:Generator_RowClassName="v_GenerateStationeryRetrievalRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RetrievalID" msprop:Generator_ColumnVarNameInTable="columnRetrievalID" msprop:Generator_ColumnPropNameInRow="RetrievalID" msprop:Generator_ColumnPropNameInTable="RetrievalIDColumn" msprop:Generator_UserColumnName="RetrievalID" type="xs:int" />
+              <xs:element name="ItemCode" msprop:Generator_ColumnVarNameInTable="columnItemCode" msprop:Generator_ColumnPropNameInRow="ItemCode" msprop:Generator_ColumnPropNameInTable="ItemCodeColumn" msprop:Generator_UserColumnName="ItemCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemCategory" msprop:Generator_ColumnVarNameInTable="columnItemCategory" msprop:Generator_ColumnPropNameInRow="ItemCategory" msprop:Generator_ColumnPropNameInTable="ItemCategoryColumn" msprop:Generator_UserColumnName="ItemCategory" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemDescription" msprop:Generator_ColumnVarNameInTable="columnItemDescription" msprop:Generator_ColumnPropNameInRow="ItemDescription" msprop:Generator_ColumnPropNameInTable="ItemDescriptionColumn" msprop:Generator_UserColumnName="ItemDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BinNumber" msprop:Generator_ColumnVarNameInTable="columnBinNumber" msprop:Generator_ColumnPropNameInRow="BinNumber" msprop:Generator_ColumnPropNameInTable="BinNumberColumn" msprop:Generator_UserColumnName="BinNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequestedQty" msprop:Generator_ColumnVarNameInTable="columnRequestedQty" msprop:Generator_ColumnPropNameInRow="RequestedQty" msprop:Generator_ColumnPropNameInTable="RequestedQtyColumn" msprop:Generator_UserColumnName="RequestedQty" type="xs:int" minOccurs="0" />
+              <xs:element name="AvailableQty" msprop:Generator_ColumnVarNameInTable="columnAvailableQty" msprop:Generator_ColumnPropNameInRow="AvailableQty" msprop:Generator_ColumnPropNameInTable="AvailableQtyColumn" msprop:Generator_UserColumnName="AvailableQty" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:v_GenerateStationeryRetrieval" />
+      <xs:field xpath="mstns:RetrievalID" />
+      <xs:field xpath="mstns:ItemCode" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

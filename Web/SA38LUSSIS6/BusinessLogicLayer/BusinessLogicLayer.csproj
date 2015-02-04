@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{19601EA9-EEEA-47C7-83E9-16572A8F92D0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BusinessLogicLayer</RootNamespace>
+    <AssemblyName>BusinessLogicLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApproveRequestController.cs" />
+    <Compile Include="ApproveStockAdjustmentController.cs" />
+    <Compile Include="bin\Exception Package\CreateFailedException.cs" />
+    <Compile Include="bin\Exception Package\UpdateFailedException.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="CreatePurchaseOrderController.cs" />
+    <Compile Include="DelegateAuthorityController.cs" />
+    <Compile Include="DeptHeadMaintainCollectionController.cs" />
+    <Compile Include="DeptHeadViewRequisitionHistoryController.cs" />
+    <Compile Include="DeptHomeController.cs" />
+    <Compile Include="DetpViewRequisitionHistoryController.cs" />
+    <Compile Include="Exception Package\NotificationFailedException.cs" />
+    <Compile Include="GenerateDisbursementListController.cs" />
+    <Compile Include="GenerateManagementReportsController.cs" />
+    <Compile Include="GenerateStationeryRetrievalController.cs" />
+    <Compile Include="GenerateStockReportsController.cs" />
+    <Compile Include="LoginController.cs" />
+    <Compile Include="ManageCollectionPointController.cs" />
+    <Compile Include="NotifyDeptHeadController.cs" />
+    <Compile Include="PrintDocumentController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReplenishStockController.cs" />
+    <Compile Include="RepMaintainCollectionPointController.cs" />
+    <Compile Include="ReportDescrepancyController.cs" />
+    <Compile Include="RequestStationeryController.cs" />
+    <Compile Include="SA38ADTeam6.Designer.cs">
+      <DependentUpon>SA38ADTeam6.edmx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="SearchStationeryController.cs" />
+    <Compile Include="StoreHomeController.cs" />
+    <Compile Include="UpdateDisbursementListController.cs" />
+    <Compile Include="UpdatePurchaseOrderController.cs" />
+    <Compile Include="ViewDescrepancyHistoryController.cs" />
+    <Compile Include="ViewRequisitionHistoryController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bin\Debug\BusinessLogicLayer.dll.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\edmxResourcesToEmbed\SA38ADTeam6.csdl" />
+    <None Include="obj\Debug\edmxResourcesToEmbed\SA38ADTeam6.msl" />
+    <None Include="obj\Debug\edmxResourcesToEmbed\SA38ADTeam6.ssdl" />
+    <None Include="obj\Debug\edmxResourcesToEmbed\SA38ADTeam6Entities.csdl" />
+    <None Include="obj\Debug\edmxResourcesToEmbed\SA38ADTeam6Entities.msl" />
+    <None Include="obj\Debug\edmxResourcesToEmbed\SA38ADTeam6Entities.ssdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\AjaxControlToolkit.dll" />
+    <Content Include="bin\Debug\ar\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\Debug\BusinessLogicLayer.dll" />
+    <Content Include="bin\Debug\BusinessLogicLayer.pdb" />
+    <Content Include="bin\Debug\cs\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\Debug\de\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\Debug\es\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\Debug\fr\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\Debug\he\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\Debug\hi\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\Debug\it\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\Debug\ja\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\Debug\ko\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\Debug\nl\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\Debug\pt\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\Debug\ru\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\Debug\tr-TR\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\Debug\zh-CHS\AjaxControlToolkit.resources.dll" />
+    <Content Include="bin\Debug\zh-CHT\AjaxControlToolkit.resources.dll" />
+    <Content Include="obj\Debug\BusinessLogicLayer.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\TempPE\SA38ADTeam6.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\SA38ADTeam6Entities.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\SA38ADTeam6Entities1.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\SA38ADTeam6Entities2.Designer.cs.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="SA38ADTeam6.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SA38ADTeam6.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
